@@ -1,8 +1,13 @@
 /*
 COLORS:
-
 Light green: #7ed56f
 Medium green: #55c57a
 Dark green: #28b485
-
 */
+
+
+/*The universal selector for a simple reset. It will select each and every element and apply the following declarations*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
