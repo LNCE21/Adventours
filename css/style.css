@@ -6,8 +6,33 @@ Dark green: #28b485
 */
 
 
-/*The universal selector for a simple reset. It will select each and every element and apply the following declarations*/
+/*I'm going to use the universal selector for a simple reset, this will select each and every element and apply the following declarations*/
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box; /*Borders and paddings will not add to the total width and height that we specify*/
+}
+
+/*I am using this tag so i can inherit the following styling later*/
+body {
+    font-family: "Lato", sans-serif; /*The Lato font has already been linked to Google Fonts*/
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7; /*1.7 times bigger than the predefined height*/
+    color: #777;
+    padding: 15px; /*The whole page will have this white padding*/
+}
+
+/*Style of the header*/
+.header {
+    height: 95vh; /*95 View Height unit is equivalent to 95% of the viewport height*/
+    background-image: /*2 background images, a thin linear gradient and an image*/
+        linear-gradient( /*A thin gradient to increase contrast*/
+        to right bottom, 
+        #80d671b3, 
+        #27b485b3) , 
+        url(../img/hero.jpg); /*Link to the hero image*/
+    background-size: cover; /*I want to cover all the box*/
+    background-position: top; /*The top of the image will always stay as the main aspect, if it is need to cut the image, it will do so from elsewhere*/
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*It has 4 clockwise coordinates x y starting top left for the clips out effect*/
 }
