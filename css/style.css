@@ -29,8 +29,8 @@ body {
     background-image: /*2 background images, a thin linear gradient and an image*/
         linear-gradient( /*A thin gradient to increase contrast*/
         to right bottom, 
-        #80d671b3, 
-        #27b485b3) , 
+        rgba(126, 213, 111, 0.8), 
+        rgba(40, 180, 131, 0.8)) , 
         url(../img/hero.jpg); /*Link to the hero image*/
     background-size: cover; /*I want to cover all the box*/
     background-position: top; /*The top of the image will always stay as the main aspect, if it is need to cut the image, it will do so from elsewhere*/
@@ -50,6 +50,14 @@ body {
     height: 35px;
 }
 
+/*text-box is to center both h1 and a -call to action- button*/
+.text-box {
+    position: absolute;
+    top: 40%; /*From the parent element (header)*/
+    left: 50%;
+    transform: translate(-50%, -50%); /*(From the element itself)*/
+}
+
 /*Hero h1 container. Inside there are 2 span: main and sub*/
 .heading-primary {
     color: #fff;
@@ -58,10 +66,16 @@ body {
 
 /*h1 first part "Outdoors"*/
 .heading-primary-main {
-    
+    display: block; /*Block-level elements occupy the entire width & create line breaks before and after (that's what i want)*/
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
 }
 
 /*h1 second part "is where life happens"*/
 .heading-primary-sub {
-    
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
 }
