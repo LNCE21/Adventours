@@ -29,7 +29,7 @@ body {
         linear-gradient( /*A thin gradient to increase contrast*/
         to right bottom, 
         rgba(126, 213, 111, 0.8), 
-        rgba(40, 180, 131, 0.8)) , 
+        rgba(40, 180, 131, 0.76)) , 
         url(../img/hero.jpg); /*Link to the hero image*/
     background-size: cover; /*I want to cover all the box*/
     background-position: top; /*The top of the image will always stay as the main aspect, if it is need to cut the image, it will do so from elsewhere*/
@@ -55,6 +55,7 @@ body {
     top: 40%; /*From the parent element (header)*/
     left: 50%;
     transform: translate(-50%, -50%); /*(From the element itself)*/
+    text-align: center; /*To center the button, because it's an inline element and it works like text*/
 }
 
 /*Hero h1 container. Inside there are 2 span: main and sub*/
@@ -62,6 +63,7 @@ body {
     color: #fff;
     text-transform: uppercase;
     backface-visibility: hidden; /*So set the entire back part of the heading invisible to the user. It fixes the shakingness*/
+    margin-bottom: 60px; /**/
 }
 
 /*h1 first part "Outdoors"*/
@@ -121,3 +123,88 @@ body {
         transform: translateX(0); /*Returns 15px back to the center*/
     }
 }
+
+/*Call to action button of the hero section 2 parts: btn and btn-white*/
+/*pseudoclass to style the element on both states (before and after*/
+.btn:link, 
+.btn:visited { 
+    text-transform: uppercase;
+    text-decoration: none; 
+    padding: 15px 40px;
+    display: inline-block; /*Margins and Paddings are respected*/
+    border-radius: 100px;
+    transition: all 0.3s; /*This is the initial state for the transform animation on hover and active states*/
+    position: relative; /*This is the reference for the absolute position of the after pseudo class*/
+} 
+
+/*This class is for the Hero Section -call to action- button animation that makes it appear from the bottom*/
+.btn-animated {
+    animation-name: moveInBottom; /*Keyframes rule animation so the button appears from the bottom*/
+    animation-duration: 1.8s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.75s;
+    animation-fill-mode: backwards; /*This applies the styles of the 0% before the animation starts*/
+}
+
+/*Hover state effect*/
+.btn:hover {
+    transform: translateY(-1.5px); /*It moves up*/
+    box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.35); /*Offsetx, y, blur, color and opacity*/
+}
+
+/*Active state effect*/
+.btn:active {
+    transform: translateY(-0.5px); /*It moves down from the reference*/
+    box-shadow: 0 5px 10px hsla(0, 0%, 0%, 0.4); /*Offsetx, y, blur, color and opacity*/
+}
+
+/*Styling specifically the -call to action- button on the hero section*/
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+/*Element exacly like the button behind the button, and when we hover, appears and when we hover out of the button it goes back behind the button*/
+.btn::after {
+ /*Specify the content and display so the element appears*/
+    content: ""; 
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute; /*This is to hide the "new btn" behind the real button*/
+    top: 0; /*This absolute positioning has its reference on the first element with relative positioning, in this case, the btn class, so we can hide it behind*/
+    left: 0;
+    z-index: -1; /*Defines the position when 2 elements are on top of another. I want this to be behind*/
+    transition: all .4s;
+    
+}
+
+.btn-white::after {
+    background-color: #fff; 
+}
+
+/*When we hover, apply the following styles on the after pseudo element:*/
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.8); /*It gets bigger*/
+    opacity: 0; /*So when it gets bigger also fades out*/
+}
+
+/*Animation of -Hero Section- button. When we load the page it appears from the bottom*/
+@keyframes moveInBottom {
+    0% {     
+        opacity: 0; /*Starts invisible*/
+        transform: translateY(40px); /*Starts on the bottom*/
+    }
+
+    80% {
+        /*Pass over the center and goes 10px up*/
+        transform: translateY(-5px);
+    }
+
+    100% {
+        opacity: 1; /*Regains Visibility*/
+        transform: translateY(0) /*Returns 5px back to the center*/
+    }
+}
+
