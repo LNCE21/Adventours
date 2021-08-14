@@ -70,6 +70,9 @@ body {
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
+    animation-name: moveInLeft; /*Assigning keyframes rules*/
+    animation-duration: 1.8s; 
+    animation-timing-function: ease-out;
 }
 
 /*h1 second part "is where life happens"*/
@@ -78,4 +81,45 @@ body {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.4px;
+    animation-name: moveInRight; /*Assigning keyframes rules*/
+    animation-duration: 1.8s;
+    animation-timing-function: ease-out;
+}
+
+/*Animation of h1, 1st part, "Outdoors" (heading-primary-main)*/
+@keyframes moveInLeft {
+
+    0% {     
+        opacity: 0; /*Starts invisible*/
+        transform: translateX(-100px); /*Starts on the left*/
+    }
+
+    80% {
+        /*Pass over the center and goes 15px to the right */
+        transform: translateX(10px); 
+    }
+
+    100% {
+        opacity: 1; /*Regains Visibility*/
+        transform: translateX(0); /*Returns 15px back to the center*/
+    }
+}
+
+/*Animation of h1, 2nd part, "is where..." (heading-primary-sub)*/
+@keyframes moveInRight {
+
+    0% {     
+        opacity: 0; /*Starts invisible*/
+        transform: translateX(100px); /*Starts on the right*/
+    }
+
+    80% {
+        /*Pass over the center and goes 15px to the left */
+        transform: translateX(-10px); 
+    }
+
+    100% {
+        opacity: 1; /*Regains Visibility*/
+        transform: translateX(0); /*Returns 15px back to the center*/
+    }
 }
