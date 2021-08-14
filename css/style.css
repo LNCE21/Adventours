@@ -5,7 +5,6 @@ Medium green: #55c57a
 Dark green: #28b485
 */
 
-
 /*I'm going to use the universal selector for a simple reset, this will select each and every element and apply the following declarations*/
 * {
     margin: 0px;
@@ -62,6 +61,7 @@ body {
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
+    backface-visibility: hidden; /*So set the entire back part of the heading invisible to the user. It fixes the shakingness*/
 }
 
 /*h1 first part "Outdoors"*/
@@ -88,7 +88,6 @@ body {
 
 /*Animation of h1, 1st part, "Outdoors" (heading-primary-main)*/
 @keyframes moveInLeft {
-
     0% {     
         opacity: 0; /*Starts invisible*/
         transform: translateX(-100px); /*Starts on the left*/
@@ -107,7 +106,6 @@ body {
 
 /*Animation of h1, 2nd part, "is where..." (heading-primary-sub)*/
 @keyframes moveInRight {
-
     0% {     
         opacity: 0; /*Starts invisible*/
         transform: translateX(100px); /*Starts on the right*/
