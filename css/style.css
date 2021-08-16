@@ -1,25 +1,28 @@
-/*
-Colors:
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-*/
-
 /*I'm going to use the universal selector for a simple reset, this will select each and every element and apply the following declarations*/
-* {
+*,
+*::after, /*Now, the following pseudo elements also have the following values:*/
+*::before
+{
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box; /*Borders and paddings will not add to the total width and height that we specify*/
+    box-sizing: inherit; (By default is not inherited, now, we can inherit the value declared on body tag)
+}
+
+/*Setting the global font size so i can add relative units to this value*/
+html {
+ /*If default is set to 16px, with this declaration, the html font-size will be 10px (10 / 16 = 0.625)*/   
+ /*If user set to 20px, our default font will be 12.5px (20*0.625=12.5)*/  
+    font-size: 62.5%; /*Now: 1rem = 10px*/ 
 }
 
 /*I am using this tag so i can inherit the following styling later*/
 body {
     font-family: "Lato", sans-serif; /*The Lato font has already been linked to Google Fonts*/
     font-weight: 400;
-    font-size: 16px;
     line-height: 1.7; /*1.7 times bigger than the predefined height*/
     color: #777;
-    padding: 15px; /*The whole page will have this white padding*/
+    padding: 1.5rem; /*The whole page will have this white padding*/
+    box-sizing: border-box; /*Borders and paddings will not add to the total width and height that we specify*/
 }
 
 /*Style of the header*/
@@ -40,13 +43,13 @@ body {
 /*Logo container*/
 .logo-box {
     position: absolute;
-    top: 40px; /*From the reference which is the parent element (header), with position relative*/
-    left: 40px;
+    top: 4rem; /*From the reference which is the parent element (header), with position relative*/
+    left: 4rem;
 }
 
 /*Logo image*/
 .logo{
-    height: 35px;
+    height: 3.5rem;
 }
 
 /*text-box is to center both h1 and a -call to action- button*/
@@ -63,15 +66,15 @@ body {
     color: #fff;
     text-transform: uppercase;
     backface-visibility: hidden; /*So set the entire back part of the heading invisible to the user. It fixes the shakingness*/
-    margin-bottom: 60px; /**/
+    margin-bottom: 6rem; /*With this we add spacing with the white button*/
 }
 
 /*h1 first part "Outdoors"*/
 .heading-primary-main {
     display: block; /*Block-level elements occupy the entire width & create line breaks before and after (that's what i want)*/
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
     animation-name: moveInLeft; /*Assigning keyframes rules*/
     animation-duration: 1.8s; 
     animation-timing-function: ease-out;
@@ -80,9 +83,9 @@ body {
 /*h1 second part "is where life happens"*/
 .heading-primary-sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 17.4px;
+    letter-spacing: 1.74;
     animation-name: moveInRight; /*Assigning keyframes rules*/
     animation-duration: 1.8s;
     animation-timing-function: ease-out;
@@ -92,12 +95,12 @@ body {
 @keyframes moveInLeft {
     0% {     
         opacity: 0; /*Starts invisible*/
-        transform: translateX(-100px); /*Starts on the left*/
+        transform: translateX(-10rem); /*Starts on the left*/
     }
 
     80% {
         /*Pass over the center and goes 15px to the right */
-        transform: translateX(10px); 
+        transform: translateX(1rem); 
     }
 
     100% {
@@ -110,12 +113,12 @@ body {
 @keyframes moveInRight {
     0% {     
         opacity: 0; /*Starts invisible*/
-        transform: translateX(100px); /*Starts on the right*/
+        transform: translateX(10rem); /*Starts on the right*/
     }
 
     80% {
         /*Pass over the center and goes 15px to the left */
-        transform: translateX(-10px); 
+        transform: translateX(-1rem); 
     }
 
     100% {
@@ -130,11 +133,12 @@ body {
 .btn:visited { 
     text-transform: uppercase;
     text-decoration: none; 
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block; /*Margins and Paddings are respected*/
-    border-radius: 100px;
+    border-radius: 10rem;
     transition: all 0.3s; /*This is the initial state for the transform animation on hover and active states*/
     position: relative; /*This is the reference for the absolute position of the after pseudo class*/
+    font-size: 1.6rem; 
 } 
 
 /*This class is for the Hero Section -call to action- button animation that makes it appear from the bottom*/
@@ -149,13 +153,13 @@ body {
 /*Hover state effect*/
 .btn:hover {
     transform: translateY(-1.5px); /*It moves up*/
-    box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.35); /*Offsetx, y, blur, color and opacity*/
+    box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.35); /*Offsetx, y, blur, color and opacity*/
 }
 
 /*Active state effect*/
 .btn:active {
     transform: translateY(-0.5px); /*It moves down from the reference*/
-    box-shadow: 0 5px 10px hsla(0, 0%, 0%, 0.4); /*Offsetx, y, blur, color and opacity*/
+    box-shadow: 0 0.5rem 1rem hsla(0, 0%, 0%, 0.4); /*Offsetx, y, blur, color and opacity*/
 }
 
 /*Styling specifically the -call to action- button on the hero section*/
@@ -171,7 +175,7 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute; /*This is to hide the "new btn" behind the real button*/
     top: 0; /*This absolute positioning has its reference on the first element with relative positioning, in this case, the btn class, so we can hide it behind*/
     left: 0;
@@ -194,12 +198,12 @@ body {
 @keyframes moveInBottom {
     0% {     
         opacity: 0; /*Starts invisible*/
-        transform: translateY(40px); /*Starts on the bottom*/
+        transform: translateY(4rem); /*Starts on the bottom*/
     }
 
     80% {
         /*Pass over the center and goes 10px up*/
-        transform: translateY(-5px);
+        transform: translateY(-0.5rem);
     }
 
     100% {
@@ -207,4 +211,11 @@ body {
         transform: translateY(0) /*Returns 5px back to the center*/
     }
 }
+
+/*
+Colors:
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+*/
 
