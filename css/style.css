@@ -127,6 +127,24 @@ body {
     }
 }
 
+/*Animation of -Hero Section- button. When we load the page it appears from the bottom*/
+@keyframes moveInBottom {
+    0% {     
+        opacity: 0; /*Starts invisible*/
+        transform: translateY(4rem); /*Starts on the bottom*/
+    }
+
+    80% {
+        /*Pass over the center and goes 10px up*/
+        transform: translateY(-0.5rem);
+    }
+
+    100% {
+        opacity: 1; /*Regains Visibility*/
+        transform: translateY(0) /*Returns 5px back to the center*/
+    }
+}
+
 /*Call to action button of the hero section 2 parts: btn and btn-white*/
 /*pseudoclass to style the element on both states (before and after*/
 .btn:link, 
@@ -194,23 +212,9 @@ body {
     opacity: 0; /*So when it gets bigger also fades out*/
 }
 
-/*Animation of -Hero Section- button. When we load the page it appears from the bottom*/
-@keyframes moveInBottom {
-    0% {     
-        opacity: 0; /*Starts invisible*/
-        transform: translateY(4rem); /*Starts on the bottom*/
-    }
 
-    80% {
-        /*Pass over the center and goes 10px up*/
-        transform: translateY(-0.5rem);
-    }
 
-    100% {
-        opacity: 1; /*Regains Visibility*/
-        transform: translateY(0) /*Returns 5px back to the center*/
-    }
-}
+
 
 /*
 Colors:
