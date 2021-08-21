@@ -1,0 +1,19 @@
+{
+  "name": "adventours",
+  "version": "1.0.0",
+  "description": "Landing Page for Adventours",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LNCE21/Adventours.git"
+  },
+  "author": "Lautaro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LNCE21/Adventours/issues"
+  },
+  "homepage": "https://github.com/LNCE21/Adventours#readme"
+}
