@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/LNCE21/Adventours/issues"
   },
-  "homepage": "https://github.com/LNCE21/Adventours#readme"
+  "homepage": "https://github.com/LNCE21/Adventours#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
 }
