@@ -4,6 +4,7 @@ $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 $color-grey-dark: #777;
 $color-white: #fff; 
+$color-black: #000;
 
 /*I'm going to use the universal selector for a simple reset, this will select each and every element and apply the following declarations*/
 *,
@@ -45,27 +46,28 @@ body {
     background-position: top; /*The top of the image will always stay as the main aspect, if it is need to cut the image, it will do so from elsewhere*/
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*It has 4 clockwise coordinates x y starting top left for the clips out effect*/
     position: relative; /*Header is the parent of logo-box, so i added relative*/
-}
+    
+    /*Logo container nested in the header*/
+    &__logo-box {
+        position: absolute;
+        top: 4rem; /*From the reference which is the parent element (header), with position relative*/
+        left: 4rem;
+    }
+    
+    /*text-box is to center both h1 and a -call to action- button nested in the header*/
+    &__text-box {
+        position: absolute;
+        top: 40%; /*From the parent element (header)*/
+        left: 50%;
+        transform: translate(-50%, -50%); /*(From the element itself)*/
+        text-align: center; /*To center the button, because it's an inline element and it works like text*/
+    }
+    
+    /*Logo image nested in the header*/
+    &__logo{
+        height: 3.5rem;
+    }
 
-/*Logo container*/
-.header__logo-box {
-    position: absolute;
-    top: 4rem; /*From the reference which is the parent element (header), with position relative*/
-    left: 4rem;
-}
-
-/*Logo image*/
-.header__logo{
-    height: 3.5rem;
-}
-
-/*text-box is to center both h1 and a -call to action- button*/
-.header__text-box {
-    position: absolute;
-    top: 40%; /*From the parent element (header)*/
-    left: 50%;
-    transform: translate(-50%, -50%); /*(From the element itself)*/
-    text-align: center; /*To center the button, because it's an inline element and it works like text*/
 }
 
 /*Hero h1 container. Inside there are 2 span: main and sub*/
@@ -74,29 +76,31 @@ body {
     text-transform: uppercase;
     backface-visibility: hidden; /*So set the entire back part of the heading invisible to the user. It fixes the shakingness*/
     margin-bottom: 6rem; /*With this we add spacing with the white button*/
+    
+    /*h1 first part "Outdoors nested inside heading-primary"*/
+    &--main {
+        display: block; /*Block-level elements occupy the entire width & create line breaks before and after (that's what i want)*/
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        animation-name: moveInLeft; /*Assigning keyframes rules*/
+        animation-duration: 1.8s; 
+        animation-timing-function: ease-out;
+    }
+
+    /*h1 second part "is where life happens nested inside heading-primary"*/
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.74;
+        animation-name: moveInRight; /*Assigning keyframes rules*/
+        animation-duration: 1.8s;
+        animation-timing-function: ease-out;
+    }
 }
 
-/*h1 first part "Outdoors"*/
-.heading-primary--main {
-    display: block; /*Block-level elements occupy the entire width & create line breaks before and after (that's what i want)*/
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft; /*Assigning keyframes rules*/
-    animation-duration: 1.8s; 
-    animation-timing-function: ease-out;
-}
 
-/*h1 second part "is where life happens"*/
-.heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.74;
-    animation-name: moveInRight; /*Assigning keyframes rules*/
-    animation-duration: 1.8s;
-    animation-timing-function: ease-out;
-}
 
 /*Animation of h1, 1st part, "Outdoors" (heading-primary-main)*/
 @keyframes moveInLeft {
@@ -152,69 +156,74 @@ body {
     }
 }
 
-/*Call to action button of the hero section 2 parts: btn and btn-white*/
-/*pseudoclass to style the element on both states (before and after*/
-.btn:link, 
-.btn:visited { 
-    text-transform: uppercase;
-    text-decoration: none; 
-    padding: 1.5rem 4rem;
-    display: inline-block; /*Margins and Paddings are respected*/
-    border-radius: 10rem;
-    transition: all 0.3s; /*This is the initial state for the transform animation on hover and active states*/
-    position: relative; /*This is the reference for the absolute position of the after pseudo class*/
-    font-size: 1.6rem; 
-} 
 
-/*This class is for the Hero Section -call to action- button animation that makes it appear from the bottom*/
-.btn--animated {
-    animation-name: moveInBottom; /*Keyframes rule animation so the button appears from the bottom*/
-    animation-duration: 1.8s;
-    animation-timing-function: ease-out;
-    animation-delay: 0.75s;
-    animation-fill-mode: backwards; /*This applies the styles of the 0% before the animation starts*/
-}
+.btn {
+    /*Call to action button of the hero section 2 parts: btn and btn-white*/
+    /*pseudoclass to style the element on both states (before and after*/
+    &:link, 
+    &:visited { 
+        text-transform: uppercase;
+        text-decoration: none; 
+        padding: 1.5rem 4rem;
+        display: inline-block; /*Margins and Paddings are respected*/
+        border-radius: 10rem;
+        transition: all 0.3s; /*This is the initial state for the transform animation on hover and active states*/
+        position: relative; /*This is the reference for the absolute position of the after pseudo class*/
+        font-size: 1.6rem; 
+    } 
 
-/*Hover state effect*/
-.btn:hover {
-    transform: translateY(-1.5px); /*It moves up*/
-    box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.35); /*Offsetx, y, blur, color and opacity*/
-}
+    /*This class is for the Hero Section -call to action- button animation that makes it appear from the bottom*/
+    &--animated {
+        animation-name: moveInBottom; /*Keyframes rule animation so the button appears from the bottom*/
+        animation-duration: 1.8s;
+        animation-timing-function: ease-out;
+        animation-delay: 0.75s;
+        animation-fill-mode: backwards; /*This applies the styles of the 0% before the animation starts*/
+    }
 
-/*Active state effect*/
-.btn:active {
-    transform: translateY(-0.5px); /*It moves down from the reference*/
-    box-shadow: 0 0.5rem 1rem hsla(0, 0%, 0%, 0.4); /*Offsetx, y, blur, color and opacity*/
-}
+    /*Hover state effect*/
+    &:hover {
+        transform: translateY(-1.5px); /*It moves up*/
+        box-shadow: 0 1rem 2rem hsla($color-black, 0.35); /*Offsetx, y, blur, color and opacity*/
 
-/*Styling specifically the -call to action- button on the hero section*/
-.btn--white {
-    background-color: $color-white;
-    color: $color-grey-dark;
-}
+        /*Nested inside btn:hover. When we hover, apply the following styles on the after pseudo element:*/
+        &::after {
+            transform: scaleX(1.4) scaleY(1.8); /*It gets bigger*/
+            opacity: 0; /*So when it gets bigger also fades out*/
+        }
+    }
 
-/*Element exacly like the button behind the button, and when we hover, appears and when we hover out of the button it goes back behind the button*/
-.btn::after {
- /*Specify the content and display so the element appears*/
-    content: ""; 
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    position: absolute; /*This is to hide the "new btn" behind the real button*/
-    top: 0; /*This absolute positioning has its reference on the first element with relative positioning, in this case, the btn class, so we can hide it behind*/
-    left: 0;
-    z-index: -1; /*Defines the position when 2 elements are on top of another. I want this to be behind*/
-    transition: all .4s;
-    
-}
+    /*Active state effect*/
+    &:active {
+        transform: translateY(-0.5px); /*It moves down from the reference*/
+        box-shadow: 0 0.5rem 1rem hsla($color-black, 0.4); /*Offsetx, y, blur, color and opacity*/
+    }
 
-.btn--white::after {
-    background-color: $color-white; 
-}
+    /*Styling specifically the -call to action- button on the hero section*/
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+        
+        //Nested Inside btn--white
+        &::after {
+            background-color: $color-white; 
+        }
+    }
 
-/*When we hover, apply the following styles on the after pseudo element:*/
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.8); /*It gets bigger*/
-    opacity: 0; /*So when it gets bigger also fades out*/
+    /*Element exacly like the button but behind the button, and when we hover appears and, when we hover out of the button it goes back behind the button*/
+    &::after {
+    /*Specify the content and display so the element appears*/
+        content: ""; 
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute; /*This is to hide the "new btn" behind the real button*/
+        top: 0; /*This absolute positioning has its reference on the first element with relative positioning, in this case, the btn class, so we can hide it behind*/
+        left: 0;
+        z-index: -1; /*Defines the position when 2 elements are on top of another. I want this to be behind*/
+        transition: all .4s;
+        
+    }
+
 }
