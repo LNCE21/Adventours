@@ -187,7 +187,7 @@ body {
     /*Hover state effect*/
     &:hover {
         transform: translateY(-1.5px); /*It moves up*/
-        box-shadow: 0 1rem 2rem hsla($color-black, 0.35); /*Offsetx, y, blur, color and opacity*/
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.3); /*Offsetx, y, blur, color and opacity*/
 
         /*Nested inside btn:hover. When we hover, apply the following styles on the after pseudo element:*/
         &::after {
@@ -199,7 +199,7 @@ body {
     /*Active state effect*/
     &:active {
         transform: translateY(-0.5px); /*It moves down from the reference*/
-        box-shadow: 0 0.5rem 1rem hsla($color-black, 0.4); /*Offsetx, y, blur, color and opacity*/
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.4); /*Offsetx, y, blur, color and opacity*/
     }
 
     /*Styling specifically the -call to action- button on the hero section*/

@@ -48,9 +48,11 @@ body {
   /*It has 4 clockwise coordinates x y starting top left for the clips out effect*/
   position: relative;
   /*Header is the parent of logo-box, so i added relative*/
+  /*Logo container nested in the header*/
+  /*text-box is to center both h1 and a -call to action- button nested in the header*/
+  /*Logo image nested in the header*/
 }
 
-/*Logo container*/
 .header__logo-box {
   position: absolute;
   top: 4rem;
@@ -58,12 +60,6 @@ body {
   left: 4rem;
 }
 
-/*Logo image*/
-.header__logo {
-  height: 3.5rem;
-}
-
-/*text-box is to center both h1 and a -call to action- button*/
 .header__text-box {
   position: absolute;
   top: 40%;
@@ -76,6 +72,10 @@ body {
   /*To center the button, because it's an inline element and it works like text*/
 }
 
+.header__logo {
+  height: 3.5rem;
+}
+
 /*Hero h1 container. Inside there are 2 span: main and sub*/
 .heading-primary {
   color: #fff;
@@ -85,9 +85,10 @@ body {
   /*So set the entire back part of the heading invisible to the user. It fixes the shakingness*/
   margin-bottom: 6rem;
   /*With this we add spacing with the white button*/
+  /*h1 first part "Outdoors nested inside heading-primary"*/
+  /*h1 second part "is where life happens nested inside heading-primary"*/
 }
 
-/*h1 first part "Outdoors"*/
 .heading-primary--main {
   display: block;
   /*Block-level elements occupy the entire width & create line breaks before and after (that's what i want)*/
@@ -103,7 +104,6 @@ body {
           animation-timing-function: ease-out;
 }
 
-/*h1 second part "is where life happens"*/
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
@@ -248,10 +248,17 @@ body {
   }
 }
 
-/*Call to action button of the hero section 2 parts: btn and btn-white*/
-/*pseudoclass to style the element on both states (before and after*/
-.btn:link,
-.btn:visited {
+.btn {
+  /*Call to action button of the hero section 2 parts: btn and btn-white*/
+  /*pseudoclass to style the element on both states (before and after*/
+  /*This class is for the Hero Section -call to action- button animation that makes it appear from the bottom*/
+  /*Hover state effect*/
+  /*Active state effect*/
+  /*Styling specifically the -call to action- button on the hero section*/
+  /*Element exacly like the button but behind the button, and when we hover appears and, when we hover out of the button it goes back behind the button*/
+}
+
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -266,7 +273,6 @@ body {
   font-size: 1.6rem;
 }
 
-/*This class is for the Hero Section -call to action- button animation that makes it appear from the bottom*/
 .btn--animated {
   -webkit-animation-name: moveInBottom;
           animation-name: moveInBottom;
@@ -282,17 +288,24 @@ body {
   /*This applies the styles of the 0% before the animation starts*/
 }
 
-/*Hover state effect*/
 .btn:hover {
   -webkit-transform: translateY(-1.5px);
           transform: translateY(-1.5px);
   /*It moves up*/
-  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.35);
-          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
   /*Offsetx, y, blur, color and opacity*/
+  /*Nested inside btn:hover. When we hover, apply the following styles on the after pseudo element:*/
 }
 
-/*Active state effect*/
+.btn:hover::after {
+  -webkit-transform: scaleX(1.4) scaleY(1.8);
+          transform: scaleX(1.4) scaleY(1.8);
+  /*It gets bigger*/
+  opacity: 0;
+  /*So when it gets bigger also fades out*/
+}
+
 .btn:active {
   -webkit-transform: translateY(-0.5px);
           transform: translateY(-0.5px);
@@ -302,13 +315,15 @@ body {
   /*Offsetx, y, blur, color and opacity*/
 }
 
-/*Styling specifically the -call to action- button on the hero section*/
 .btn--white {
   background-color: #fff;
   color: #777;
 }
 
-/*Element exacly like the button behind the button, and when we hover, appears and when we hover out of the button it goes back behind the button*/
+.btn--white::after {
+  background-color: #fff;
+}
+
 .btn::after {
   /*Specify the content and display so the element appears*/
   content: "";
@@ -325,18 +340,5 @@ body {
   /*Defines the position when 2 elements are on top of another. I want this to be behind*/
   -webkit-transition: all .4s;
   transition: all .4s;
-}
-
-.btn--white::after {
-  background-color: #fff;
-}
-
-/*When we hover, apply the following styles on the after pseudo element:*/
-.btn:hover::after {
-  -webkit-transform: scaleX(1.4) scaleY(1.8);
-          transform: scaleX(1.4) scaleY(1.8);
-  /*It gets bigger*/
-  opacity: 0;
-  /*So when it gets bigger also fades out*/
 }
 /*# sourceMappingURL=main.css.map */
