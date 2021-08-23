@@ -1,0 +1,39 @@
+//In this file are the different layouts through the project, 1 file for each page.
+
+
+/*Style of the header*/
+.header {
+    height: 95vh; /*95 View Height unit is equivalent to 95% of the viewport height*/
+    background-image: /*2 background images, a thin linear gradient and an image*/
+        linear-gradient( /*A thin gradient to increase contrast*/
+        to right bottom, 
+        rgba($color-primary-light, 0.8), 
+        rgba($color-primary-dark, 0.76)) , 
+        url(../img/hero.jpg); /*Link to the hero image*/
+    background-size: cover; /*I want to cover all the box*/
+    background-position: top; /*The top of the image will always stay as the main aspect, if it is need to cut the image, it will do so from elsewhere*/
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*It has 4 clockwise coordinates x y starting top left for the clips out effect*/
+    position: relative; /*Header is the parent of logo-box, so i added relative*/
+    
+    /*Logo container nested in the header*/
+    &__logo-box {
+        position: absolute;
+        top: 4rem; /*From the reference which is the parent element (header), with position relative*/
+        left: 4rem;
+    }
+    
+    /*text-box is to center both h1 and a -call to action- button nested in the header*/
+    &__text-box {
+        position: absolute;
+        top: 40%; /*From the parent element (header)*/
+        left: 50%;
+        transform: translate(-50%, -50%); /*(From the element itself)*/
+        text-align: center; /*To center the button, because it's an inline element and it works like text*/
+    }
+    
+    /*Logo image nested in the header*/
+    &__logo{
+        height: 3.5rem;
+    }
+
+}

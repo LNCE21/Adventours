@@ -1,3 +1,29 @@
-//This is a -Partial SASS file- can be imported into the main SASS file. They alwayas start with an underscore.
+//In this file are  allthe basic definitions of the entire projet.
 
+/*I'm going to use the universal selector for a simple reset, this will select each and every element and apply the following declarations*/
+*,
+*::after, /*Now, the following pseudo elements also have the following values:*/
+*::before
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit; /*(By default is not inherited, now, we can inherit the value declared on body tag)*/
+}
+
+/*Setting the global font size so i can add relative units to this value*/
+html {
+ /*If default is set to 16px, with this declaration, the html font-size will be 10px (10 / 16 = 0.625)*/   
+ /*If user set to 20px, our default font will be 12.5px (20*0.625=12.5)*/  
+    font-size: 62.5%; /*Now: 1rem = 10px*/ 
+}
+
+/*I am using this tag so i can inherit the following styling later*/
+body {
+    font-family: "Lato", sans-serif; /*The Lato font has already been linked to Google Fonts*/
+    font-weight: 400;
+    line-height: 1.7; /*1.7 times bigger than the predefined height*/
+    color: $color-grey-dark;
+    padding: 1.5rem; /*The whole page will have this white padding*/
+    box-sizing: border-box; /*Borders and paddings will not add to the total width and height that we specify*/
+}
 

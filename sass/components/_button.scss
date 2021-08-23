@@ -1,0 +1,72 @@
+//The following button is an independent component and can be used in different parts of the project or through different projects
+
+.btn {
+    /*Call to action button of the hero section 2 parts: btn and btn-white*/
+    /*pseudoclass to style the element on both states (before and after*/
+    &:link, 
+    &:visited { 
+        text-transform: uppercase;
+        text-decoration: none; 
+        padding: 1.5rem 4rem;
+        display: inline-block; /*Margins and Paddings are respected*/
+        border-radius: 10rem;
+        transition: all 0.3s; /*This is the initial state for the transform animation on hover and active states*/
+        position: relative; /*This is the reference for the absolute position of the after pseudo class*/
+        font-size: 1.6rem; 
+    } 
+
+    /*This class is for the Hero Section -call to action- button animation that makes it appear from the bottom*/
+    &--animated {
+        animation-name: moveInBottom; /*Keyframes rule animation so the button appears from the bottom*/
+        animation-duration: 1.8s;
+        animation-timing-function: ease-out;
+        animation-delay: 0.75s;
+        animation-fill-mode: backwards; /*This applies the styles of the 0% before the animation starts*/
+    }
+
+    /*Hover state effect*/
+    &:hover {
+        transform: translateY(-1.5px); /*It moves up*/
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.3); /*Offsetx, y, blur, color and opacity*/
+
+        /*Nested inside btn:hover. When we hover, apply the following styles on the after pseudo element:*/
+        &::after {
+            transform: scaleX(1.4) scaleY(1.8); /*It gets bigger*/
+            opacity: 0; /*So when it gets bigger also fades out*/
+        }
+    }
+
+    /*Active state effect*/
+    &:active {
+        transform: translateY(-0.5px); /*It moves down from the reference*/
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.4); /*Offsetx, y, blur, color and opacity*/
+    }
+
+    /*Styling specifically the -call to action- button on the hero section*/
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+        
+        //Nested Inside btn--white
+        &::after {
+            background-color: $color-white; 
+        }
+    }
+
+    /*Element exacly like the button but behind the button, and when we hover appears and, when we hover out of the button it goes back behind the button*/
+    &::after {
+    /*Specify the content and display so the element appears*/
+        content: ""; 
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute; /*This is to hide the "new btn" behind the real button*/
+        top: 0; /*This absolute positioning has its reference on the first element with relative positioning, in this case, the btn class, so we can hide it behind*/
+        left: 0;
+        z-index: -1; /*Defines the position when 2 elements are on top of another. I want this to be behind*/
+        transition: all .4s;
+        
+    }
+
+}

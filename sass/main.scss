@@ -9,74 +9,14 @@
 @import "base/typography";
 @import "base/utilities";
 
+//Importing the -components- scss file
+@import "components/button";
+
+//Importing the -layout- scss file
+@import "layout/header";
+
 //Importing the -pages- scss file
 @import "pages/home";
-
-
-
-/*I'm going to use the universal selector for a simple reset, this will select each and every element and apply the following declarations*/
-*,
-*::after, /*Now, the following pseudo elements also have the following values:*/
-*::before
-{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: inherit; /*(By default is not inherited, now, we can inherit the value declared on body tag)*/
-}
-
-/*Setting the global font size so i can add relative units to this value*/
-html {
- /*If default is set to 16px, with this declaration, the html font-size will be 10px (10 / 16 = 0.625)*/   
- /*If user set to 20px, our default font will be 12.5px (20*0.625=12.5)*/  
-    font-size: 62.5%; /*Now: 1rem = 10px*/ 
-}
-
-/*I am using this tag so i can inherit the following styling later*/
-body {
-    font-family: "Lato", sans-serif; /*The Lato font has already been linked to Google Fonts*/
-    font-weight: 400;
-    line-height: 1.7; /*1.7 times bigger than the predefined height*/
-    color: $color-grey-dark;
-    padding: 1.5rem; /*The whole page will have this white padding*/
-    box-sizing: border-box; /*Borders and paddings will not add to the total width and height that we specify*/
-}
-
-/*Style of the header*/
-.header {
-    height: 95vh; /*95 View Height unit is equivalent to 95% of the viewport height*/
-    background-image: /*2 background images, a thin linear gradient and an image*/
-        linear-gradient( /*A thin gradient to increase contrast*/
-        to right bottom, 
-        rgba($color-primary-light, 0.8), 
-        rgba($color-primary-dark, 0.76)) , 
-        url(../img/hero.jpg); /*Link to the hero image*/
-    background-size: cover; /*I want to cover all the box*/
-    background-position: top; /*The top of the image will always stay as the main aspect, if it is need to cut the image, it will do so from elsewhere*/
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*It has 4 clockwise coordinates x y starting top left for the clips out effect*/
-    position: relative; /*Header is the parent of logo-box, so i added relative*/
-    
-    /*Logo container nested in the header*/
-    &__logo-box {
-        position: absolute;
-        top: 4rem; /*From the reference which is the parent element (header), with position relative*/
-        left: 4rem;
-    }
-    
-    /*text-box is to center both h1 and a -call to action- button nested in the header*/
-    &__text-box {
-        position: absolute;
-        top: 40%; /*From the parent element (header)*/
-        left: 50%;
-        transform: translate(-50%, -50%); /*(From the element itself)*/
-        text-align: center; /*To center the button, because it's an inline element and it works like text*/
-    }
-    
-    /*Logo image nested in the header*/
-    &__logo{
-        height: 3.5rem;
-    }
-
-}
 
 /*Hero h1 container. Inside there are 2 span: main and sub*/
 .heading-primary {
@@ -110,128 +50,5 @@ body {
 
 
 
-/*Animation of h1, 1st part, "Outdoors" (heading-primary-main)*/
-@keyframes moveInLeft {
-    0% {     
-        opacity: 0; /*Starts invisible*/
-        transform: translateX(-10rem); /*Starts on the left*/
-    }
-
-    80% {
-        /*Pass over the center and goes 15px to the right */
-        transform: translateX(1rem); 
-    }
-
-    100% {
-        opacity: 1; /*Regains Visibility*/
-        transform: translateX(0); /*Returns 15px back to the center*/
-    }
-}
-
-/*Animation of h1, 2nd part, "is where..." (heading-primary-sub)*/
-@keyframes moveInRight {
-    0% {     
-        opacity: 0; /*Starts invisible*/
-        transform: translateX(10rem); /*Starts on the right*/
-    }
-
-    80% {
-        /*Pass over the center and goes 15px to the left */
-        transform: translateX(-1rem); 
-    }
-
-    100% {
-        opacity: 1; /*Regains Visibility*/
-        transform: translateX(0); /*Returns 15px back to the center*/
-    }
-}
-
-/*Animation of -Hero Section- button. When we load the page it appears from the bottom*/
-@keyframes moveInBottom {
-    0% {     
-        opacity: 0; /*Starts invisible*/
-        transform: translateY(4rem); /*Starts on the bottom*/
-    }
-
-    80% {
-        /*Pass over the center and goes 10px up*/
-        transform: translateY(-0.5rem);
-    }
-
-    100% {
-        opacity: 1; /*Regains Visibility*/
-        transform: translateY(0) /*Returns 5px back to the center*/
-    }
-}
 
 
-.btn {
-    /*Call to action button of the hero section 2 parts: btn and btn-white*/
-    /*pseudoclass to style the element on both states (before and after*/
-    &:link, 
-    &:visited { 
-        text-transform: uppercase;
-        text-decoration: none; 
-        padding: 1.5rem 4rem;
-        display: inline-block; /*Margins and Paddings are respected*/
-        border-radius: 10rem;
-        transition: all 0.3s; /*This is the initial state for the transform animation on hover and active states*/
-        position: relative; /*This is the reference for the absolute position of the after pseudo class*/
-        font-size: 1.6rem; 
-    } 
-
-    /*This class is for the Hero Section -call to action- button animation that makes it appear from the bottom*/
-    &--animated {
-        animation-name: moveInBottom; /*Keyframes rule animation so the button appears from the bottom*/
-        animation-duration: 1.8s;
-        animation-timing-function: ease-out;
-        animation-delay: 0.75s;
-        animation-fill-mode: backwards; /*This applies the styles of the 0% before the animation starts*/
-    }
-
-    /*Hover state effect*/
-    &:hover {
-        transform: translateY(-1.5px); /*It moves up*/
-        box-shadow: 0 1rem 2rem rgba($color-black, 0.3); /*Offsetx, y, blur, color and opacity*/
-
-        /*Nested inside btn:hover. When we hover, apply the following styles on the after pseudo element:*/
-        &::after {
-            transform: scaleX(1.4) scaleY(1.8); /*It gets bigger*/
-            opacity: 0; /*So when it gets bigger also fades out*/
-        }
-    }
-
-    /*Active state effect*/
-    &:active {
-        transform: translateY(-0.5px); /*It moves down from the reference*/
-        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.4); /*Offsetx, y, blur, color and opacity*/
-    }
-
-    /*Styling specifically the -call to action- button on the hero section*/
-    &--white {
-        background-color: $color-white;
-        color: $color-grey-dark;
-        
-        //Nested Inside btn--white
-        &::after {
-            background-color: $color-white; 
-        }
-    }
-
-    /*Element exacly like the button but behind the button, and when we hover appears and, when we hover out of the button it goes back behind the button*/
-    &::after {
-    /*Specify the content and display so the element appears*/
-        content: ""; 
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 10rem;
-        position: absolute; /*This is to hide the "new btn" behind the real button*/
-        top: 0; /*This absolute positioning has its reference on the first element with relative positioning, in this case, the btn class, so we can hide it behind*/
-        left: 0;
-        z-index: -1; /*Defines the position when 2 elements are on top of another. I want this to be behind*/
-        transition: all .4s;
-        
-    }
-
-}
