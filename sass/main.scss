@@ -1,13 +1,18 @@
-//Importing the partial scss file
-@import "base/base";
+//Importing the -abstracts- scss file
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-//Variables with the 3 colors will be using 
-$color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
-$color-grey-dark: #777;
-$color-white: #fff; 
-$color-black: #000;
+//Importing the -base- scss file
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+//Importing the -pages- scss file
+@import "pages/home";
+
+
 
 /*I'm going to use the universal selector for a simple reset, this will select each and every element and apply the following declarations*/
 *,

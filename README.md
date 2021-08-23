@@ -35,3 +35,25 @@ Utilities file:
 
 ### Abstracts:
 Code that's not going to output any css (variables, mixins etc)
+Files:
+Variables
+Mixins
+Functions
+
+### Components: Building blocks
+Components are our reusable building blocks that make our website/app. They can be completly independent.
+So, we create 1 file for each of our components.
+
+### Layout: Layout holds these components
+The components are held together by the layout of the page, so we need a layout folder for each piece of the global layout of the entire project.
+Inside, we're going to have a global footer, header, etc.
+These layout elements should work everywhere and on all pages. 
+
+### Pages: Specific style for specific page
+Specific style for specific page (example: home) goes into a file in the pages folder.
+
+### Themes: For storing different themes
+In case that we are doing a web app with different themes.
+
+### Vendors: Third party css
+This folder is for third party css. For example: css file of a bootstrap. Or an icon, an animation etc
