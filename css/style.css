@@ -1,96 +1,3 @@
-/*I'm going to use the universal selector for a simple reset, this will select each and every element and apply the following declarations*/
-*,
-*::after,
-*::before {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: inherit;
-  /*(By default is not inherited, now, we can inherit the value declared on body tag)*/ }
-
-/*Setting the global font size so i can add relative units to this value*/
-html {
-  /*If default is set to 16px, with this declaration, the html font-size will be 10px (10 / 16 = 0.625)*/
-  /*If user set to 20px, our default font will be 12.5px (20*0.625=12.5)*/
-  font-size: 62.5%;
-  /*Now: 1rem = 10px*/ }
-
-/*I am using this tag so i can inherit the following styling later*/
-body {
-  font-family: "Lato", sans-serif;
-  /*The Lato font has already been linked to Google Fonts*/
-  font-weight: 400;
-  line-height: 1.7;
-  /*1.7 times bigger than the predefined height*/
-  color: #777;
-  padding: 1.5rem;
-  /*The whole page will have this white padding*/
-  box-sizing: border-box;
-  /*Borders and paddings will not add to the total width and height that we specify*/ }
-
-/*Style of the header*/
-.header {
-  height: 95vh;
-  /*95 View Height unit is equivalent to 95% of the viewport height*/
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.76)), url(../img/hero.jpg);
-  /*Link to the hero image*/
-  background-size: cover;
-  /*I want to cover all the box*/
-  background-position: top;
-  /*The top of the image will always stay as the main aspect, if it is need to cut the image, it will do so from elsewhere*/
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  /*It has 4 clockwise coordinates x y starting top left for the clips out effect*/
-  position: relative;
-  /*Header is the parent of logo-box, so i added relative*/
-  /*Logo container nested in the header*/
-  /*text-box is to center both h1 and a -call to action- button nested in the header*/
-  /*Logo image nested in the header*/ }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    /*From the reference which is the parent element (header), with position relative*/
-    left: 4rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    /*From the parent element (header)*/
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /*(From the element itself)*/
-    text-align: center;
-    /*To center the button, because it's an inline element and it works like text*/ }
-  .header__logo {
-    height: 3.5rem; }
-
-/*Hero h1 container. Inside there are 2 span: main and sub*/
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  /*So set the entire back part of the heading invisible to the user. It fixes the shakingness*/
-  margin-bottom: 6rem;
-  /*With this we add spacing with the white button*/
-  /*h1 first part "Outdoors nested inside heading-primary"*/
-  /*h1 second part "is where life happens nested inside heading-primary"*/ }
-  .heading-primary--main {
-    display: block;
-    /*Block-level elements occupy the entire width & create line breaks before and after (that's what i want)*/
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    /*Assigning keyframes rules*/
-    animation-duration: 1.8s;
-    animation-timing-function: ease-out; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.74;
-    animation-name: moveInRight;
-    /*Assigning keyframes rules*/
-    animation-duration: 1.8s;
-    animation-timing-function: ease-out; }
-
 /*Animation of h1, 1st part, "Outdoors" (heading-primary-main)*/
 @keyframes moveInLeft {
   0% {
@@ -137,6 +44,68 @@ body {
     opacity: 1;
     /*Regains Visibility*/
     transform: translateY(0); } }
+
+/*I'm going to use the universal selector for a simple reset, this will select each and every element and apply the following declarations*/
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit;
+  /*(By default is not inherited, now, we can inherit the value declared on body tag)*/ }
+
+/*Setting the global font size so i can add relative units to this value*/
+html {
+  /*If default is set to 16px, with this declaration, the html font-size will be 10px (10 / 16 = 0.625)*/
+  /*If user set to 20px, our default font will be 12.5px (20*0.625=12.5)*/
+  font-size: 62.5%;
+  /*Now: 1rem = 10px*/ }
+
+/*I am using this tag so i can inherit the following styling later*/
+body {
+  box-sizing: border-box;
+  /*Borders and paddings will not add to the total width and height that we specify*/ }
+
+/*I am using this tag so i can inherit the following styling later*/
+body {
+  font-family: "Lato", sans-serif;
+  /*The Lato font has already been linked to Google Fonts*/
+  font-weight: 400;
+  line-height: 1.7;
+  /*1.7 times bigger than the predefined height*/
+  color: #777;
+  padding: 1.5rem;
+  /*The whole page will have this white padding*/ }
+
+/*Hero h1 container. Inside there are 2 span: main and sub*/
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /*So set the entire back part of the heading invisible to the user. It fixes the shakingness*/
+  margin-bottom: 6rem;
+  /*With this we add spacing with the white button*/
+  /*h1 first part "Outdoors nested inside heading-primary"*/
+  /*h1 second part "is where life happens nested inside heading-primary"*/ }
+  .heading-primary--main {
+    display: block;
+    /*Block-level elements occupy the entire width & create line breaks before and after (that's what i want)*/
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    /*Assigning keyframes rules*/
+    animation-duration: 1.8s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.74;
+    animation-name: moveInRight;
+    /*Assigning keyframes rules*/
+    animation-duration: 1.8s;
+    animation-timing-function: ease-out; }
 
 .btn {
   /*Call to action button of the hero section 2 parts: btn and btn-white*/
@@ -202,3 +171,37 @@ body {
     z-index: -1;
     /*Defines the position when 2 elements are on top of another. I want this to be behind*/
     transition: all .4s; }
+
+/*Style of the header*/
+.header {
+  height: 95vh;
+  /*95 View Height unit is equivalent to 95% of the viewport height*/
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.76)), url(../img/hero.jpg);
+  /*Link to the hero image*/
+  background-size: cover;
+  /*I want to cover all the box*/
+  background-position: top;
+  /*The top of the image will always stay as the main aspect, if it is need to cut the image, it will do so from elsewhere*/
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /*It has 4 clockwise coordinates x y starting top left for the clips out effect*/
+  position: relative;
+  /*Header is the parent of logo-box, so i added relative*/
+  /*Logo container nested in the header*/
+  /*text-box is to center both h1 and a -call to action- button nested in the header*/
+  /*Logo image nested in the header*/ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    /*From the reference which is the parent element (header), with position relative*/
+    left: 4rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    /*From the parent element (header)*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*(From the element itself)*/
+    text-align: center;
+    /*To center the button, because it's an inline element and it works like text*/ }
+  .header__logo {
+    height: 3.5rem; }

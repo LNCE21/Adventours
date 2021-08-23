@@ -19,11 +19,6 @@ html {
 
 /*I am using this tag so i can inherit the following styling later*/
 body {
-    font-family: "Lato", sans-serif; /*The Lato font has already been linked to Google Fonts*/
-    font-weight: 400;
-    line-height: 1.7; /*1.7 times bigger than the predefined height*/
-    color: $color-grey-dark;
-    padding: 1.5rem; /*The whole page will have this white padding*/
     box-sizing: border-box; /*Borders and paddings will not add to the total width and height that we specify*/
 }
 

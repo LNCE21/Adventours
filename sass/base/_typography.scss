@@ -1,0 +1,40 @@
+//Here are all the typography settings
+
+/*I am using this tag so i can inherit the following styling later*/
+body {
+    font-family: "Lato", sans-serif; /*The Lato font has already been linked to Google Fonts*/
+    font-weight: 400;
+    line-height: 1.7; /*1.7 times bigger than the predefined height*/
+    color: $color-grey-dark;
+    padding: 1.5rem; /*The whole page will have this white padding*/
+}
+
+/*Hero h1 container. Inside there are 2 span: main and sub*/
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden; /*So set the entire back part of the heading invisible to the user. It fixes the shakingness*/
+    margin-bottom: 6rem; /*With this we add spacing with the white button*/
+    
+    /*h1 first part "Outdoors nested inside heading-primary"*/
+    &--main {
+        display: block; /*Block-level elements occupy the entire width & create line breaks before and after (that's what i want)*/
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        animation-name: moveInLeft; /*Assigning keyframes rules*/
+        animation-duration: 1.8s; 
+        animation-timing-function: ease-out;
+    }
+
+    /*h1 second part "is where life happens nested inside heading-primary"*/
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.74;
+        animation-name: moveInRight; /*Assigning keyframes rules*/
+        animation-duration: 1.8s;
+        animation-timing-function: ease-out;
+    }
+}
