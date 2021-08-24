@@ -149,6 +149,13 @@ html {
 
 /*I am using this tag so i can inherit the following styling later*/
 body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*Borders and paddings will not add to the total width and height that we specify*/
+}
+
+/*I am using this tag so i can inherit the following styling later*/
+body {
   font-family: "Lato", sans-serif;
   /*The Lato font has already been linked to Google Fonts*/
   font-weight: 400;
@@ -157,9 +164,48 @@ body {
   color: #777;
   padding: 1.5rem;
   /*The whole page will have this white padding*/
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  /*Borders and paddings will not add to the total width and height that we specify*/
+}
+
+/*Hero h1 container. Inside there are 2 span: main and sub*/
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  /*So set the entire back part of the heading invisible to the user. It fixes the shakingness*/
+  margin-bottom: 6rem;
+  /*With this we add spacing with the white button*/
+  /*h1 first part "Outdoors nested inside heading-primary"*/
+  /*h1 second part "is where life happens nested inside heading-primary"*/
+}
+
+.heading-primary--main {
+  display: block;
+  /*Block-level elements occupy the entire width & create line breaks before and after (that's what i want)*/
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  -webkit-animation-name: moveInLeft;
+          animation-name: moveInLeft;
+  /*Assigning keyframes rules*/
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.74;
+  -webkit-animation-name: moveInRight;
+          animation-name: moveInRight;
+  /*Assigning keyframes rules*/
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 
 .btn {
@@ -256,45 +302,54 @@ body {
   transition: all .4s;
 }
 
-/*Hero h1 container. Inside there are 2 span: main and sub*/
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  /*So set the entire back part of the heading invisible to the user. It fixes the shakingness*/
-  margin-bottom: 6rem;
-  /*With this we add spacing with the white button*/
-  /*h1 first part "Outdoors nested inside heading-primary"*/
-  /*h1 second part "is where life happens nested inside heading-primary"*/
+/*Style of the header*/
+.header {
+  height: 95vh;
+  /*95 View Height unit is equivalent to 95% of the viewport height*/
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.76))), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.76)), url(../img/hero.jpg);
+  /*Link to the hero image*/
+  background-size: cover;
+  /*I want to cover all the box*/
+  background-position: top;
+  /*The top of the image will always stay as the main aspect, if it is need to cut the image, it will do so from elsewhere*/
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /*It has 4 clockwise coordinates x y starting top left for the clips out effect*/
+  position: relative;
+  /*Header is the parent of logo-box, so i added relative*/
+  /*Logo container nested in the header*/
+  /*text-box is to center both h1 and a -call to action- button nested in the header*/
+  /*Logo image nested in the header*/
 }
 
-.heading-primary--main {
-  display: block;
-  /*Block-level elements occupy the entire width & create line breaks before and after (that's what i want)*/
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  -webkit-animation-name: moveInLeft;
-          animation-name: moveInLeft;
-  /*Assigning keyframes rules*/
-  -webkit-animation-duration: 1.8s;
-          animation-duration: 1.8s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  /*From the reference which is the parent element (header), with position relative*/
+  left: 4rem;
 }
 
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.74;
-  -webkit-animation-name: moveInRight;
-          animation-name: moveInRight;
-  /*Assigning keyframes rules*/
-  -webkit-animation-duration: 1.8s;
-          animation-duration: 1.8s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  /*From the parent element (header)*/
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  /*(From the element itself)*/
+  text-align: center;
+  /*To center the button, because it's an inline element and it works like text*/
+}
+
+.header__logo {
+  height: 3.5rem;
+}
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto;
+  margin-bottom: 8rem;
 }
 /*# sourceMappingURL=main.css.map */
