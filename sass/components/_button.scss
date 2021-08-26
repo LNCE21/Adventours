@@ -12,7 +12,7 @@
         border-radius: 10rem;
         transition: all 0.3s; /*This is the initial state for the transform animation on hover and active states*/
         position: relative; /*This is the reference for the absolute position of the after pseudo class*/
-        font-size: 1.6rem; 
+        font-size: $default-font-size; //1.6rem 
     } 
 
     /*This class is for the Hero Section -call to action- button animation that makes it appear from the bottom*/
@@ -71,6 +71,30 @@
 
 }
 
+//About Section "Learn More -->" button
 .btn-text {
-    
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline-block; //So that we can add padding/margin etc
+        text-decoration: none;
+        border-bottom: .1rem solid $color-primary;
+        padding: .3rem;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+        transform: translateY(-2px) scale(1.05);
+        border-radius: .8rem;
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+        transform: translateY(0px); 
+    }
+
 }
