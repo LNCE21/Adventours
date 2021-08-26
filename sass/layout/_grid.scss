@@ -1,6 +1,5 @@
 .row {
     max-width: $grid-width; // 1140px is standard, converted to rem: 1140px/10px= 114rem (because 1 rem is 10px in this project)
-    background-color: #eee;
     margin: 0 auto; //to center a block element inside a block element
     //Here we are selecting everything except the last child
     &:not(:last-child) { 
@@ -11,7 +10,6 @@
 
     //Selects all elements in which the class attribute starts with "col-"
     [class^="col-"] {
-        background-color: orangered;
         float: left;
         &:not(:last-child) {
             margin-right: $gutter-horizontal;

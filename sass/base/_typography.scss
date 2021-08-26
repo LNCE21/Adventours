@@ -40,7 +40,7 @@ body {
 }
 
 .heading-secondary {
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-transform: uppercase;
     font-weight: 700;
     //Setting a background gradient on the heading
@@ -58,5 +58,19 @@ body {
     &:hover {
         transform: skewx(-8deg) skewy(-0.9deg) scale(1.08);
         text-shadow: .5rem .1rem .2rem rgba($color-black, .09);
+    }
+}
+
+.heading-tertiary {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+    //Selecting everything except the last child
+    &:not(:last-child) {
+        margin-bottom: 3rem;
     }
 }
