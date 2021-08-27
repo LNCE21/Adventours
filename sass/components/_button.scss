@@ -53,7 +53,7 @@
         }
     }
 
-    /*Element exacly like the button but behind the button, and when we hover appears and, when we hover out of the button it goes back behind the button*/
+    //Element exacly like the button but behind the button, and when we hover appears and, when we hover out of the button it goes back behind the button
     &::after {
     /*Specify the content and display so the element appears*/
         content: ""; 
