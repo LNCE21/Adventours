@@ -227,9 +227,30 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0px); }
 
-.composition__photo {
-  width: 55%;
-  box-shadow: 0 1.5rem rgba(0, 0, 0, 0.4); }
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 50%;
+    box-shadow: 0 0.5rem rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    position: absolute;
+    transition: all .4s; }
+    .composition__photo--p1 {
+      left: 2rem;
+      top: -0.2rem; }
+    .composition__photo--p2 {
+      right: 1.5rem;
+      top: 5.5rem; }
+    .composition__photo--p3 {
+      left: 9.9rem;
+      top: 13rem; }
+    .composition__photo:hover {
+      outline: 1rem solid rgba(0, 0, 0, 0.1);
+      transform: scale(1.09) translateY(-2rem);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 1; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.9); }
 
 /*Style of the header*/
 .header {

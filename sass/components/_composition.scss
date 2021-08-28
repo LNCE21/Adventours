@@ -1,7 +1,41 @@
-//
+//This component is for the image display with hover effect
 .composition {
+    position: relative;
+
     &__photo {
-        width: 55%;
-        box-shadow: 0 1.5rem rgba($color-black, .4);
+        width: 50%; //This way the images will be responsive
+        box-shadow: 0 .5rem rgba($color-black, .4);
+        border-radius: 4px;
+        position: absolute;
+        transition: all .4s;
+
+        //First photo, pine trees
+        &--p1 {
+            left: 2rem;
+            top: -0.2rem;
+        }
+        //Second photo, road
+        &--p2 {
+            right: 1.5rem; //Starts from the right side, 0 pixels.
+            top: 5.5rem;
+        }
+        //Third photo, mountain path
+        &--p3 {
+            left: 9.9rem;
+            top: 13rem;
+        }
+        //The hover effect on the photos
+        &:hover {
+            //The frame of each photo, is also set to offset 
+            outline: 1rem solid rgba($color-black, .1);
+            transform: scale(1.09) translateY(-2rem);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+            z-index: 1; //To overlap when hover
+        }
+
+    }
+    //When we hover the composition element, select the photo that is nested, and the photo that is not hovered
+    &:hover &__photo:not(:hover) {
+        transform: scale(.9); //When hover one photo it scales up, and the others scale down
     }
 }
