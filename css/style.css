@@ -149,8 +149,7 @@ body {
   /*This class is for the Hero Section -call to action- button animation that makes it appear from the bottom*/
   /*Hover state effect*/
   /*Active state effect*/
-  /*Styling specifically the -call to action- button on the hero section*/
-  /*Element exacly like the button but behind the button, and when we hover appears and, when we hover out of the button it goes back behind the button*/ }
+  /*Styling specifically the -call to action- button on the hero section*/ }
   .btn:link, .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
@@ -227,6 +226,10 @@ body {
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0px); }
+
+.composition__photo {
+  width: 55%;
+  box-shadow: 0 1.5rem rgba(0, 0, 0, 0.4); }
 
 /*Style of the header*/
 .header {
