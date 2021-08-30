@@ -379,10 +379,47 @@ body {
           transform: translateY(0px);
 }
 
+.composition {
+  position: relative;
+}
+
 .composition__photo {
-  width: 55%;
-  -webkit-box-shadow: 0 1.5rem rgba(0, 0, 0, 0.4);
-          box-shadow: 0 1.5rem rgba(0, 0, 0, 0.4);
+  width: 50%;
+  -webkit-box-shadow: 0 0.5rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0.5rem rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  position: absolute;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.composition__photo--p1 {
+  left: 2rem;
+  top: -0.2rem;
+}
+
+.composition__photo--p2 {
+  right: 1.5rem;
+  top: 5.5rem;
+}
+
+.composition__photo--p3 {
+  left: 9.9rem;
+  top: 13rem;
+}
+
+.composition__photo:hover {
+  outline: 1rem solid rgba(0, 0, 0, 0.1);
+  -webkit-transform: scale(1.09) translateY(-2rem);
+          transform: scale(1.09) translateY(-2rem);
+  -webkit-box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.composition:hover .composition__photo:not(:hover) {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 /*Style of the header*/
@@ -481,5 +518,15 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh;
+}
+
+.section-features {
+  padding: 20rem 0;
+  /*2 background images, a thin linear gradient and an image*/
+  /*A thin gradient to increase contrast*/
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.76))), url(..img\nat-4.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.76)), url(..img\nat-4.jpg);
+  background-size: cover;
+  /*I want to cover all the box*/
 }
 /*# sourceMappingURL=main.css.map */
