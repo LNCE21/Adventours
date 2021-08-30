@@ -449,6 +449,26 @@ body {
           transform: scale(1.03) translateY(-1.5rem);
 }
 
+.card {
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+  -moz-perspective: 150rem;
+}
+
+.card__side {
+  background-color: red;
+  height: 50rem;
+  -webkit-transition: all .8s;
+  transition: all .8s;
+  color: white;
+  font-size: 2rem;
+}
+
+.card:hover .card__side {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
 /*Style of the header*/
 .header {
   height: 95vh;

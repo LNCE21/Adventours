@@ -270,6 +270,18 @@ body {
   .feature-box:hover {
     transform: scale(1.03) translateY(-1.5rem); }
 
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem; }
+  .card__side {
+    background-color: red;
+    height: 50rem;
+    transition: all .3s;
+    color: white;
+    font-size: 2rem; }
+  .card:hover .card__side {
+    transform: rotateY(180deg); }
+
 /*Style of the header*/
 .header {
   height: 95vh;
@@ -352,7 +364,3 @@ body {
   background-color: #f7f7f7;
   padding: 15rem 0;
   margin-bottom: 50rem; }
-
-.card {
-  background-color: red;
-  height: 50rem; }
