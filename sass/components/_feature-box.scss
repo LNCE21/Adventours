@@ -1,12 +1,29 @@
 //This component is for the feature box
 
 .feature-box {
-    &__icon {
+    background-color: rgba($color-white, .8);
+    font-size: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    transition: all .3s;
 
+    &__icon {
+        font-size: 6rem;
+        margin-bottom: .5rem;
+            //Setting a background gradient on the heading
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        //The background only have to occupy the width of the h2, that's why i took off "block"
+        display: inline-block; 
+        //To get clipped that gradient background behind the text. So it will only be visible where the text is
+        -webkit-background-clip: text;
+        //Making the text transparent so we can see the gradient.
+        color: transparent;
     }
 
-    &__text {
-
+    &:hover {
+        transform: scale(1.03) translateY(-1.5rem);
     }
 
 }

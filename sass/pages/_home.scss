@@ -4,10 +4,11 @@
     background-color: $color-grey-light-1;
     padding: 25rem 0; //Top and bottom 25rem   
     margin-top: -20vh; //So the grey background touches the polygon
-    
+    margin-bottom: 11vh;
 }
 
 .section-features {
+    height: 60vh;
     padding: 20rem 0;
     background-image: /*2 background images, a thin linear gradient and an image*/
     linear-gradient( /*A thin gradient to increase contrast*/
@@ -16,5 +17,11 @@
     rgba($color-primary-dark, 0.76)) , 
     url(../img/nat-4.jpg); /*Link to the hero image*/
     background-size: cover; /*I want to cover all the box*/
-    
+    transform: skewY(-7deg);
+    //Here we are going to select the direct children (row)
+    & > * {
+        transform: skewY(7deg);
+    }
+         
 }
+    
