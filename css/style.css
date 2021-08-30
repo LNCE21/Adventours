@@ -347,3 +347,12 @@ body {
   transform: skewY(-7deg); }
   .section-features > * {
     transform: skewY(7deg); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 15rem 0;
+  margin-bottom: 50rem; }
+
+.card {
+  background-color: red;
+  height: 50rem; }

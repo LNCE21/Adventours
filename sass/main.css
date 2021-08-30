@@ -564,4 +564,10 @@ body {
   -webkit-transform: skewY(7deg);
           transform: skewY(7deg);
 }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 15rem 0;
+  margin-bottom: 50rem;
+}
 /*# sourceMappingURL=main.css.map */
