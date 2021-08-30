@@ -1,4 +1,8 @@
-# Steps
+# Adventours Landing Page
+
+## This website is on working progress, if you have any doubts or suggestions, reach me on my socials.
+
+## Steps
 
 ## Install NPM Node SASS to compile the scss file into css
 
