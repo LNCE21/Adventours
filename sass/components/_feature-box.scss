@@ -12,7 +12,7 @@
     &__icon {
         font-size: 6rem;
         margin-bottom: .5rem;
-            //Setting a background gradient on the heading
+        //Setting a background gradient on the heading
         background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
         //The background only have to occupy the width of the h2, that's why i took off "block"
         display: inline-block; 

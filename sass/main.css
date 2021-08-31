@@ -453,20 +453,49 @@ body {
   -webkit-perspective: 150rem;
           perspective: 150rem;
   -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
 }
 
 .card__side {
-  background-color: red;
   height: 50rem;
-  -webkit-transition: all .8s;
-  transition: all .8s;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease;
   color: white;
   font-size: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 3px;
+  -webkit-box-shadow: 0.7rem 0.7rem 0.7rem 0.05rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0.7rem 0.7rem 0.7rem 0.05rem rgba(0, 0, 0, 0.1);
 }
 
-.card:hover .card__side {
+.card__side--front {
+  background-color: #fff;
+}
+
+.card__side--back {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+
+.card__side--back-1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730));
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+}
+
+.card:hover .card__side--front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card:hover .card__side--back {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
 }
 
 /*Style of the header*/
@@ -570,7 +599,7 @@ body {
 
 .section-features {
   height: 60vh;
-  padding: 20rem 0;
+  padding: 20rem 0rem;
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.76))), url(../img/nat-4.jpg);
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.76)), url(../img/nat-4.jpg);
   /*Link to the hero image*/
