@@ -53,6 +53,13 @@
         }
     }
 
+    //Styling button -dicover all tours- of the tours section
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+        
+    }
+
     //Element exacly like the button but behind the button, and when we hover appears and, when we hover out of the button it goes back behind the button
     &::after {
     /*Specify the content and display so the element appears*/
