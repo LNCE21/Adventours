@@ -1,18 +1,35 @@
 //This is a component for the stories section
 .story {
+    //Styling of the -Story- component
     width: 75%;
     margin: 0 auto;
     box-shadow: 0 3rem 6rem rgba($color-black, .1);
     background-color: $color-white;
     border-radius: 3px;
-    padding: 6rem;
+    padding: 6rem 6rem 8rem 9rem;
     font-size: $default-font-size;
+    transform: skewX(-12deg);
 
+    //Circular Shape to hold the user's photo of the story section
     &__shape {
         width: 15rem;
         height: 15rem;
-        background-color: orangered;
         float: left;
-        
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        //Moving the image up and skewing back so the skew effect only applies to the box
+        transform: translateX(-3rem) skewX(12deg);
+    }
+
+    //Styling the image of the user that goes inside the shape
+    &__img {
+        height: 100%;
+    }
+
+    //Skew back the text so it the "skew" effect only applies to the box
+    &__text {
+        transform: skewX(12deg);
     }
 }
