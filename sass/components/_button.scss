@@ -7,7 +7,7 @@
     &:visited { 
         text-transform: uppercase;
         text-decoration: none; 
-        padding: 1.5rem 4rem;
+        padding: 1.5rem 3.2rem;
         display: inline-block; /*Margins and Paddings are respected*/
         border-radius: 10rem;
         transition: all 0.3s; /*This is the initial state for the transform animation on hover and active states*/
@@ -111,20 +111,20 @@
 .btn-stories {
     &:link,
     &:visited {
-        background-color: rgba(243, 243, 243, 0.753);
-        font-size: 2.8rem;
+        background-color: rgb(100, 100, 100);
+        font-size: 2.2rem;
         weight: 700;
-        color: rgb(100, 100, 100);
+        color: rgba(243, 243, 243, 0.753);
         display: inline-block; //So that we can add padding/margin etc
         text-decoration: none;
         border-bottom: .0rem solid $color-primary;
-        padding: .3rem;
+        padding: 2rem;
         transition: all .2s;
     }
 
     &:hover {
-        background-color: $color-primary;
-        color: $color-white;
+        background-color: rgb(100, 100, 100);
+        color: rgba(243, 243, 243, 0.753);
         box-shadow: 0 1rem 2rem rgba($color-black, .15);
         transform: translateY(-2px) scale(1.05);
         border-radius: .2rem;
