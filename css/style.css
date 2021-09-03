@@ -126,6 +126,20 @@ body {
   font-weight: 700;
   text-transform: uppercase; }
 
+.heading-quaternary {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right bottom, #4b4b4b, #4e4e4e);
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  transition: all .25s; }
+  .heading-quaternary:hover {
+    transform: skewx(-8deg) skewy(-0.9deg) scale(1.08);
+    text-shadow: 0.5rem 0.1rem 0.2rem rgba(0, 0, 0, 0.09); }
+
 .paragraph {
   font-size: 1.6rem; }
   .paragraph:not(:last-child) {
@@ -415,7 +429,8 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: -1; }
+  z-index: -1;
+  opacity: .30; }
 
 /*Style of the header*/
 .header {

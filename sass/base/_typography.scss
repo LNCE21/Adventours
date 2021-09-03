@@ -67,6 +67,28 @@ body {
     text-transform: uppercase;
 }
 
+.heading-quaternary {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    //Setting a background gradient on the heading
+    background-image: linear-gradient(to right bottom, rgb(75, 75, 75), rgb(78, 78, 78));
+    //The background only have to occupy the width of the h2, that's why i took off "block"
+    display: inline-block; 
+    //To get clipped that gradient background behind the text. So it will only be visible where the text is
+    -webkit-background-clip: text;
+    //Making the text transparent so we can see the gradient.
+    color: transparent;
+    letter-spacing: .2rem; 
+    //Adding an animation to the h2
+    transition: all .25s;
+    //
+    &:hover {
+        transform: skewx(-8deg) skewy(-0.9deg) scale(1.08);
+        text-shadow: .5rem .1rem .2rem rgba($color-black, .09);
+    }
+}
+
 .paragraph {
     font-size: $default-font-size; //1.6rem
     //Selecting everything except the last child
