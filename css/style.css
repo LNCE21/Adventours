@@ -452,7 +452,9 @@ body {
   height: 100%;
   width: 100%;
   z-index: -1;
-  opacity: .30; }
+  opacity: .30;
+  overflow: hidden;
+  transform: skewY(-6deg); }
   .bg-video__content {
     height: 100%;
     width: 100%;
