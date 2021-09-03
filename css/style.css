@@ -409,6 +409,14 @@ body {
     transform: translateX(-3.8rem) scale(1);
     filter: blur(3px) brightness(80%); }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2; }
+
 /*Style of the header*/
 .header {
   height: 95vh;
@@ -494,4 +502,5 @@ body {
 
 .section-stories {
   padding: 15rem 0;
-  background-color: #f7f7f7; }
+  background-color: #f7f7f7;
+  position: relative; }
