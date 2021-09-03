@@ -76,6 +76,7 @@
     &__heading-span {
         border-radius: 2px;
         padding: 0.45rem;
+        backface-visibility: hidden;
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
         &--1 {

@@ -327,6 +327,7 @@ body {
   .card__heading-span {
     border-radius: 2px;
     padding: 0.45rem;
+    backface-visibility: hidden;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone; }
     .card__heading-span--1 {
@@ -379,11 +380,33 @@ body {
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skewX(12deg); }
+    transform: translateX(-0.9rem) skewX(12deg);
+    position: relative;
+    overflow: hidden; }
   .story__img {
-    height: 100%; }
+    backface-visibility: hidden;
+    height: 100%;
+    transform: translateX(-3.8rem) scale(1.4);
+    transition: all .5s; }
   .story__text {
-    transform: skewX(12deg); }
+    transform: skewX(12deg);
+    margin-left: 5rem; }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    opacity: 0;
+    transition: all .5s; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__img {
+    transform: translateX(-3.8rem) scale(1);
+    filter: blur(3px) brightness(80%); }
 
 /*Style of the header*/
 .header {
