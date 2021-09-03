@@ -106,3 +106,33 @@
     }
 
 }
+
+//Story Section "More Stories -->" button
+.btn-stories {
+    &:link,
+    &:visited {
+        background-color: rgba(243, 243, 243, 0.753);
+        font-size: 2.8rem;
+        weight: 700;
+        color: rgb(100, 100, 100);
+        display: inline-block; //So that we can add padding/margin etc
+        text-decoration: none;
+        border-bottom: .0rem solid $color-primary;
+        padding: .3rem;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+        transform: translateY(-2px) scale(1.05);
+        border-radius: .2rem;
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+        transform: translateY(0px); 
+    }
+
+}
