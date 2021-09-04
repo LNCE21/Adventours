@@ -35,3 +35,28 @@
     position: relative;
     z-index: 0;  
 }
+
+.section-book {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, #55c57a79, #7ed56f77);
+    transform: skewY(-6deg);
+    
+    & > * {
+        transform: skewY(6deg);
+        
+    }
+}
+
+.book {
+    background-image:
+        linear-gradient(105deg,
+        rgba($color-white, .9) 0% ,
+        rgba($color-white, .8) 25% ,
+        rgba($color-white, .7) 50%,
+        transparent 55%),
+        url(../img/nat-10.jpg);
+    background-size: cover;
+    height: 50rem; 
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
+}
