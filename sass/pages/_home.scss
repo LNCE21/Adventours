@@ -56,38 +56,41 @@
     */
 }
 
-.book {
-    background-image: 
-    linear-gradient(105deg,
-    rgba($color-white, 1) 0%,
-    rgba($color-white, .9) 50%,
-    transparent 85%); 
-    height: 45rem; 
+.book { 
+    height: 45rem;
+    width: 114rem; 
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
     overflow: hidden;
+    background-image: 
+    linear-gradient(to right bottom, 
+    rgba($color-primary-dark, .45), 
+    rgba($color-primary-light, .1));
 
     &__form {
         float: left;
-        width: 45%;
+        height: 100%;
+        width: 40%;
         padding: 6rem;
-
+        overflow: hidden;
     }
 
     &__picture{
         float: right;
-        background-size: cover;
-        height: 90%;
+        height: 100%;
         width: 60%;
-        z-index: -1;
-        /*
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        */
+        background-size: cover;
+        background-position:center;
+        -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
         background-image: url(../img/nat-10.jpg);
-        
-
+        transition: all .5s;
+        transform: scale(1.03);
+        overflow: hidden;
     }
-
-
+    
+    &:hover &__picture {
+        transform: scale(1);
+        filter: blur(2px) brightness(80%);
+    }
 }
