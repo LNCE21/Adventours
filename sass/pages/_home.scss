@@ -61,18 +61,16 @@
     width: 114rem; 
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
-    overflow: hidden;
     background-image: 
-    linear-gradient(to right bottom, 
-    rgba($color-primary-dark, .45), 
-    rgba($color-primary-light, .1));
+    linear-gradient(to right, 
+    rgba($color-grey-light-2, .99), 
+    rgba($color-grey-light-1, .80));
 
     &__form {
         float: left;
         height: 100%;
         width: 40%;
         padding: 6rem;
-        overflow: hidden;
     }
 
     &__picture{
@@ -85,12 +83,9 @@
         clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
         background-image: url(../img/nat-10.jpg);
         transition: all .5s;
-        transform: scale(1.03);
-        overflow: hidden;
     }
     
     &:hover &__picture {
-        transform: scale(1);
-        filter: blur(2px) brightness(80%);
+       filter: blur(2px) brightness(80%);
     }
 }

@@ -569,14 +569,12 @@ body {
   width: 114rem;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  background-image: linear-gradient(to right bottom, rgba(40, 180, 133, 0.45), rgba(126, 213, 111, 0.1)); }
+  background-image: linear-gradient(to right, rgba(238, 238, 238, 0.99), rgba(247, 247, 247, 0.8)); }
   .book__form {
     float: left;
     height: 100%;
     width: 40%;
-    padding: 6rem;
-    overflow: hidden; }
+    padding: 6rem; }
   .book__picture {
     float: right;
     height: 100%;
@@ -586,9 +584,6 @@ body {
     -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
     background-image: url(../img/nat-10.jpg);
-    transition: all .5s;
-    transform: scale(1.03);
-    overflow: hidden; }
+    transition: all .5s; }
   .book:hover .book__picture {
-    transform: scale(1);
     filter: blur(2px) brightness(80%); }
