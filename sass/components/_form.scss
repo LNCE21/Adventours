@@ -1,19 +1,109 @@
 //This component is for styling the form of the book section
-.form{
-    &__group{
-
+.form {
+    &__group:not(:last-child) {
+        margin-bottom: 2rem;
     }
 
     &__input{
+        font-family: inherit;
         font-size: 1.5rem;
-        padding: 1.5rem 0rem;
-        border-radius: 2px;
-        background-color: rgba($color-white, .5);
-        border: none;
+        color: inherit;
+        padding: 1.5rem 1rem;
+        border-radius: 3px;
+        background-color: rgba($color-grey-dark, .09);
+        border: 0.4rem solid transparent;
+        width: 100%;
+        display: block;
+        transition: all .4s;
+
+        //Styling with focus pseudoelement to add some borders that indicates if you're adding a valid/invalid input
+        &:focus {
+
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .09);
+            border: 0.4rem solid $color-secondary-dark;
+        }
+    
+        &:focus:invalid {
+            border: 0.4rem solid $color-secondary-dark;
+        }
+
+        &:focus:valid {
+            border: 0.4rem solid $color-primary-dark;
+        }
+    
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark-2;            
+        }
     }
 
+    //Styling the placeholder box on the -Book section-
     &__label{
-
+        font-family: inherit;
+        font-size: 1.5rem;
+        padding-left: 1.4rem;
+        font-weight: 700;
+        margin-top: .7rem;
+        display: block;
+        transition: all .5s;
     }
 
+    //Selecting the placeholder and its label so when we hover it appears from up
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+    
+    //Styling both radio buttons on -Book section-
+    &__radio-group {
+        width: 49%;
+        display: inline-block;
+    }
+
+    //Hiding the default radio button so we only see the one we created
+    &__radio-input {
+        display: none;
+    } 
+
+    //Styling the label (text) of the radio buttons
+    &__radio-label {
+        font-size: $default-font-size;
+        cursor: pointer;
+        position: relative;
+        padding-left: 2.5rem;
+    }
+
+    //Styling our own radio button
+    &__radio-button {
+        height: 2rem;
+        width: 2rem;
+        border: 4px solid $color-primary;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        //Styling the inner element (dot) when we select that option
+        &::after {
+            content: "";
+            display: block;
+            height: 1rem;
+            width: 1rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-primary;
+            opacity: 0;
+            transition: all .2s;
+        }
+    }
+
+    //When we hit the "label element", the radio-input becomes "checked". After that we select the sibling "radio-label" and his child "radio-button" because this last one is the one we want to change 
+    &__radio-input:checked ~ &__radio-label &__radio-button::after {
+        opacity: 1;
+    }
 }

@@ -3,6 +3,7 @@
 .btn {
     /*Call to action button of the hero section 2 parts: btn and btn-white*/
     /*pseudoclass to style the element on both states (before and after*/
+    &,
     &:link, 
     &:visited { 
         text-transform: uppercase;
@@ -13,6 +14,10 @@
         transition: all 0.3s; /*This is the initial state for the transform animation on hover and active states*/
         position: relative; /*This is the reference for the absolute position of the after pseudo class*/
         font-size: $default-font-size; //1.6rem 
+
+        //Change for the button element
+        border: none;
+        cursor: pointer;
     } 
 
     /*This class is for the Hero Section -call to action- button animation that makes it appear from the bottom*/
@@ -37,7 +42,9 @@
     }
 
     /*Active state effect*/
-    &:active {
+    &:active,
+    &:focus {
+        outline:none;
         transform: translateY(-0.5px); /*It moves down from the reference*/
         box-shadow: 0 0.5rem 1rem rgba($color-black, 0.4); /*Offsetx, y, blur, color and opacity*/
     }
