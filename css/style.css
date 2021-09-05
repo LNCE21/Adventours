@@ -459,6 +459,13 @@ body {
     width: 100%;
     object-fit: cover; }
 
+.form__input {
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none; }
+
 /*Style of the header*/
 .header {
   height: 95vh;
@@ -566,7 +573,6 @@ body {
 
 .book {
   height: 45rem;
-  width: 114rem;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
   background-image: linear-gradient(to right, rgba(238, 238, 238, 0.99), rgba(247, 247, 247, 0.8)); }

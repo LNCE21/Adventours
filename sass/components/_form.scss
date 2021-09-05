@@ -1,0 +1,19 @@
+//This component is for styling the form of the book section
+.form{
+    &__group{
+
+    }
+
+    &__input{
+        font-size: 1.5rem;
+        padding: 1.5rem 0rem;
+        border-radius: 2px;
+        background-color: rgba($color-white, .5);
+        border: none;
+    }
+
+    &__label{
+
+    }
+
+}
