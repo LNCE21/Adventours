@@ -608,10 +608,16 @@ body {
 .footer {
   background-color: #333;
   padding: 10rem 0;
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  color: #f7f7f7;
+  transition: all .2s; }
   .footer__logo-box {
     text-align: center;
     margin-bottom: 8rem; }
+  .footer__navigation {
+    border-top: 1px solid #f7f7f7;
+    padding: 2rem;
+    display: inline-block; }
   .footer__logo {
     width: 15rem;
     height: auto; }
@@ -623,15 +629,20 @@ body {
       margin-right: 1.5rem; }
   .footer__link:link, .footer__link:visited {
     color: #f7f7f7;
+    background-color: #333;
     text-decoration: none;
     text-transform: uppercase;
-    display: inline-block;
-    transition: all 2s; }
+    display: inline-block; }
   .footer__link:hover, .footer__link:active {
     color: #55c57a;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
     transform: rotate(-0.2deg) scale(1.05);
     border-radius: 3px; }
+  .footer__copyright {
+    border-top: 1px solid #f7f7f7;
+    padding: 2rem; }
+  .footer .col-1-of-2 {
+    display: inline-block; }
 
 .section-about {
   background-color: #f7f7f7;

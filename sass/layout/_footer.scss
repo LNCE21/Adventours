@@ -3,6 +3,8 @@
     background-color: $color-grey-dark-3;
     padding: 10rem 0;
     font-size: 1.4rem;
+    color: $color-grey-light-1;
+    transition: all .2s;
 
     &__logo-box {
         text-align: center;
@@ -10,7 +12,9 @@
     }
 
     &__navigation {
-               
+        border-top: 1px solid $color-grey-light-1;
+        padding: 2rem;
+        display: inline-block;
     }
     
     &__logo {
@@ -20,7 +24,6 @@
 
     &__list {
         list-style: none; 
-       
     }
     
     &__item {
@@ -36,10 +39,10 @@
         &:link,
         &:visited {
             color: $color-grey-light-1;
+            background-color: $color-grey-dark-3;
             text-decoration:none;
             text-transform: uppercase;
             display: inline-block;
-            transition: all 2s;
         }
 
         &:hover,
@@ -49,6 +52,15 @@
             transform: rotate(-.2deg) scale(1.05);
             border-radius: 3px;
         }
+    }
+
+    &__copyright {
+        border-top: 1px solid $color-grey-light-1;
+        padding: 2rem;
+    }
+
+    .col-1-of-2 {
+        display:inline-block;
     }
 }
 
