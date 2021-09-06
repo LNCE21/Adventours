@@ -13,6 +13,27 @@
 
     </head>
     <body>
+        <!--Hamburguer Menu-->
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+            <!--Styling the background-->
+            <div class="navigation__background">&nbsp;</div>
+            <!--Navigation links-->
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#about" class="navigation__link"><span>01</span>About section</a></li>
+                    <li class="navigation__item"><a href="#features" class="navigation__link"><span>02</span>Your benefits</a></li>
+                    <li class="navigation__item"><a href="#tours" class="navigation__link"><span>03</span>Popular tours</a></li>
+                    <li class="navigation__item"><a href="#stories" class="navigation__link"><span>04</span>Stories</a></li>
+                    <li class="navigation__item"><a href="#book" class="navigation__link"><span>05</span>Book now</a></li>
+                    </ul>
+            </nav>
+        </div>
+
         <!--Hero Section Starts-->
         <header class="header">
             <!--Header logo, i put it inside a div so it has a container-->
@@ -31,7 +52,7 @@
             </div>         
         </header>
         <main>
-            <section class="section-about">
+            <section id="about" class="section-about">
                 <!--This is an utility class-->
                 <div class="u-center-text u-margin-bottom-big"> 
                     <h2 class="heading-secondary">
@@ -76,7 +97,7 @@
             <!--About Section ends-->
 
             <!--Features Section Starts-->
-            <section class="section-features">
+            <section id="features" class="section-features">
                 <div class="row">
                     <div class="col-1-of-4">
                         <div class="feature-box">
@@ -241,7 +262,7 @@
             <!--Tours Section Ends-->
             
             <!--Stories Section Starts-->
-            <section class="section-stories">
+            <section id="stories" class="section-stories">
                 
                 <!--Background video of the section-->
                 <div class="bg-video">
@@ -302,7 +323,7 @@
             <!--Stories Section Ends-->
 
             <!--Booking Section Starts-->
-            <section class="section-book">
+            <section id="book" class="section-book">
                 <div class="row">
                     <div class="book">
                         <!--Form styled as a component-->
@@ -379,7 +400,7 @@
                     <!--Footer Copyright-->
                     <div class="col-1-of-2">
                         <p class="footer__copyright">
-                            Built by <a href="#" class="footer__link">Lautaro</a> for practicing my skills as a software developer and to show on my<a href="#" class="footer__link">portfolio</a>. Copyright &copy by Lautaro.
+                            Built by <a href="#" class="footer__link">Lautaro</a> for practicing my skills as a software developer and to show on my <a href="#" class="footer__link">portfolio</a>. Copyright &copy by Lautaro.
                         </p>
                     </div>
                 </div>
