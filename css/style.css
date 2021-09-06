@@ -625,10 +625,13 @@ body {
     color: #f7f7f7;
     text-decoration: none;
     text-transform: uppercase;
-    display: inline-block; }
+    display: inline-block;
+    transition: all 2s; }
   .footer__link:hover, .footer__link:active {
     color: #55c57a;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    transform: rotate(-0.2deg) scale(1.05);
+    border-radius: 3px; }
 
 .section-about {
   background-color: #f7f7f7;
