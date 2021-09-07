@@ -6,6 +6,42 @@
     @include absCenter;
     background-color: rgba($color-black, .8) ;
     z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s;
+    
+    
+    //This pseudo class applies to the element wich is the target when we click on a button attached, in this case applies to the popup class
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content {
+
+    }
+
+    //Button for closing the popup component
+    &__close {
+        &:link,
+        &:visited {
+            color: $color-grey-dark;
+            position: absolute;
+            /*top: 1.5rem;
+            right: 4rem;*/
+            float: right;
+            top: 8%;
+            right: 8%;
+            font-size: 3rem;
+            text-decoration: none;
+            display: inline-block;
+            line-height: 1;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
 
     //Content includes both left and right side of the card
     &__content {
@@ -31,6 +67,7 @@
 
     //Right container (where the h2, h3, p, a are located
     &__right {
+        vertical-align: center;
         width: 66.66666667%;
         float: left;
         text-align: justify;

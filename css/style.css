@@ -552,7 +552,27 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 9999; }
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .4s; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup__close:link, .popup__close:visited {
+    color: #777;
+    position: absolute;
+    /*top: 1.5rem;
+            right: 4rem;*/
+    float: right;
+    top: 8%;
+    right: 8%;
+    font-size: 3rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1; }
+  .popup__close:hover {
+    color: #55c57a; }
   .popup__content {
     position: fixed;
     top: 50%;
@@ -570,6 +590,7 @@ body {
     width: 33.333333%;
     float: left; }
   .popup__right {
+    vertical-align: center;
     width: 66.66666667%;
     float: left;
     text-align: justify;
