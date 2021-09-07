@@ -30,9 +30,8 @@
         right: 2.3rem;
         background-image: 
         radial-gradient(
-        rgba($color-grey-dark, .9), 
-        rgba($color-grey-light-2, .9),
-        rgba($color-grey-light-1, .9) );
+        rgba($color-grey-dark-3, .7), 
+        rgba($color-grey-light-2, .9) );
         z-index: 1000;
         transition: transform .4s;
     }
@@ -51,11 +50,12 @@
     
     &__list{
         position:absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 10%;
+        right: 10%;
+        /*left: 50%;
+        transform: translate(-50%, -50%);*/
         list-style: none;
-        text-align: center;
+        text-align:justify;
     }
 
     
@@ -99,7 +99,7 @@
 
     //Functionality
     &__checkbox:checked ~ &__background {
-        transform: scale(100);
+        transform: scale(28);
     } 
     
     &__checkbox:checked ~ &__nav {
