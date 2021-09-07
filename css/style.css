@@ -543,6 +543,56 @@ body {
 .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
   opacity: 1; }
 
+.popup {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999; }
+  .popup__content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    background-color: #fff;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    overflow: hidden; }
+  .popup__img {
+    display: block;
+    width: 100%; }
+  .popup__left {
+    width: 33.333333%;
+    float: left; }
+  .popup__right {
+    width: 66.66666667%;
+    float: left;
+    text-align: justify;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    padding: 3rem 5rem; }
+  .popup__text {
+    width: 90%;
+    font-size: 1.45rem;
+    margin-bottom: 4rem;
+    -moz-column-count: 2;
+    -moz-column-gap: 4rem;
+    -moz-column-rule: 1px solid rgba(153, 153, 153, 0.7);
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid rgba(153, 153, 153, 0.7);
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto; }
+
 /*Style of the header*/
 .header {
   height: 95vh;
@@ -673,12 +723,12 @@ body {
 
 .navigation__nav {
   height: 0;
-  position: fixed;
+  width: 0;
+  position: unset;
   top: 0;
   right: 0;
   z-index: 1500;
-  opacity: 0;
-  width: 0; }
+  opacity: 0; }
 
 .navigation__list {
   position: absolute;
@@ -721,6 +771,7 @@ body {
   transform: scale(28); }
 
 .navigation__checkbox:checked ~ .navigation__nav {
+  position: fixed;
   opacity: 1;
   width: 100%;
   height: 100%; }

@@ -1,10 +1,65 @@
+//This component is for the popup effect styling
 .popup {
     height: 100vh;
     width: 100vw;
-    background-color: $color-black;
-    opacity: .9;
+    position: fixed;
+    @include absCenter;
+    background-color: rgba($color-black, .8) ;
+    z-index: 9999;
 
+    //Content includes both left and right side of the card
     &__content {
+       @include absCenter; 
+       width: 75%;
+       background-color: $color-white;
+       box-shadow: 0 2rem 4rem rgba($color-black, .2);
+       border-radius: 3px;
+       overflow: hidden; //So the img does not overflow the border radius
+    }
 
+    //Styling of both images of the left side
+    &__img {
+        display: block;
+        width: 100%;
+    }
+
+    //Left container with 2 img elements
+    &__left {
+        width: 33.333333%;
+        float: left;
+    }
+
+    //Right container (where the h2, h3, p, a are located
+    &__right {
+        width: 66.66666667%;
+        float: left;
+        text-align: justify;
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        padding: 3rem 5rem;
+    }
+   
+    //Styling of the text with columns & hyphens
+    &__text {
+        width: 90%;
+        font-size: 1.45rem;
+        margin-bottom: 4rem;
+        
+        //To style the pagination, in columns & his prefix for compatibility
+        -moz-column-count: 2;
+        -moz-column-gap: 4rem;
+        -moz-column-rule: 1px solid rgba($color-grey-dark-2, .7);
+
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid rgba($color-grey-dark-2, .7);
+        
+        //To style the text with hyphens & his prefix for compatibility
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
     }
 }
