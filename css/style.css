@@ -1,3 +1,11 @@
+/*
+In here we are going to pass the next breakpoints
+$breakpoint argument choices:
+phone
+tab-port
+tab-land
+big-desktop
+*/
 /*Animation of h1, 1st part, "Outdoors" (heading-primary-main)*/
 @keyframes moveInLeft {
   0% {

@@ -13,3 +13,24 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+//This mixin is for a media query manager for responsive design
+
+@mixin respond-phone {
+    @media (max-width: 600px) { @content };
+}
+
+
+/*
+In here we are going to pass the next breakpoints
+$breakpoint argument choices:
+phone
+tab-port
+tab-land
+big-desktop
+*/
+
+//If
+@mixin respond ($breakpoint) {
+    @if 
+}
