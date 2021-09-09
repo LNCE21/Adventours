@@ -2,8 +2,8 @@
 In here we are going to pass the next breakpoints
 $breakpoint argument choices:
 phone
-tab-port
-tab-land
+tab-portrait
+tab-landscape
 big-desktop
 */
 /*Animation of h1, 1st part, "Outdoors" (heading-primary-main)*/
@@ -68,6 +68,18 @@ html {
   /*If user set to 20px, our default font will be 12.5px (20*0.625=12.5)*/
   font-size: 62.5%;
   /*Now: 1rem = 10px*/ }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 43.75%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 /*I am using this tag so i can inherit the following styling later*/
 body {

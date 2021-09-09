@@ -14,23 +14,36 @@
     transform: translate(-50%, -50%);
 }
 
-//This mixin is for a media query manager for responsive design
-
-@mixin respond-phone {
-    @media (max-width: 600px) { @content };
-}
-
 
 /*
 In here we are going to pass the next breakpoints
 $breakpoint argument choices:
 phone
-tab-port
-tab-land
+tab-portrait
+tab-landscape
 big-desktop
 */
 
-//If
+//Media query manager
 @mixin respond ($breakpoint) {
-    @if 
+    
+    //Media query from 0 to 600px
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content };
+    }
+    //Media query from 600px to 900px 
+    @if $breakpoint == tab-portrait {
+        @media (max-width: 56.25em) { @content };
+    }
+    //Media query from 900px to 1200px
+    @if $breakpoint == tab-landscape {
+        @media (max-width: 75em) { @content };
+    }
+
+    //Media query from 1200 to 1800 is no needed (because we adopt the desktop-first approach
+
+    //Media query from 1800px to bigger resolutions 
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) { @content };
+    }
 }
