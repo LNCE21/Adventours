@@ -15,24 +15,28 @@ html {
  /*If default is set to 16px, with this declaration, the html font-size will be 10px (10 / 16 = 0.625)*/   
  /*If user set to 20px, our default font will be 12.5px (20*0.625=12.5)*/  
     font-size: 62.5%; /*Now: 1rem = 10px*/ 
-
-    //1rem = 7px (7px/16px= 43.75%)
-    @include respond (phone) {
-        font-size: 43.75%;
-    }
-    //1rem = 8px (8px/16px= 50%)
-    @include respond (tab-portrait) {
-        font-size: 50%;
-    }
-    //1rem = 9px (9px/16px= 56.25%)
-    @include respond (tab-landscape) {
-        font-size: 56.25%; 
-    }
-    //1rem = 12px (12px/16px= 75%)
+   
+      
+    //1rem = 12px (12px/16px= 75%) width > 1800?
     @include respond (big-desktop) {
         font-size: 75%;
     }
+    
+    //1rem = 9px (9px/16px= 56.25%) width < 1200?
+    @include respond (tab-landscape) {
+        font-size: 56.25%; 
+    }
 
+    //1rem = 8px (8px/16px= 50%) width < 900?
+    @include respond (tab-portrait) {
+        font-size: 50%;
+    }
+  
+    //1rem = 6px (6px/16px= 43.75%) width < 600?
+    @include respond (phone) {
+        font-size: 43.75%;
+    }
+    
 }
 
 /*I am using this tag so i can inherit the following styling later*/
