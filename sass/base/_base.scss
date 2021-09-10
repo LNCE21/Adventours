@@ -32,7 +32,7 @@ html {
         font-size: 50%;
     }
   
-    //1rem = 6px (6px/16px= 43.75%) width < 600?
+    //1rem = 7px (7px/16px= 43.75%) width < 600?
     @include respond (phone) {
         font-size: 43.75%;
     }
