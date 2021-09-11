@@ -5,6 +5,8 @@ phone
 tab-portrait
 tab-landscape
 big-desktop
+
+Order to write media queries: base + typography > general layout + grid > page layout > components
 */
 /*Animation of h1, 1st part, "Outdoors" (heading-primary-main)*/
 @keyframes moveInLeft {
@@ -84,7 +86,12 @@ html {
 /*I am using this tag so i can inherit the following styling later*/
 body {
   box-sizing: border-box;
-  /*Borders and paddings will not add to the total width and height that we specify*/ }
+  /*Borders and paddings will not add to the total width and height that we specify*/
+  padding: 1.5rem;
+  /*The whole page will have this white padding*/ }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 /*I am using this tag so i can inherit the following styling later*/
 body {
@@ -93,9 +100,7 @@ body {
   font-weight: 400;
   line-height: 1.7;
   /*1.7 times bigger than the predefined height*/
-  color: #777;
-  padding: 1.5rem;
-  /*The whole page will have this white padding*/ }
+  color: #777; }
 
 /*Hero h1 container. Inside there are 2 span: main and sub*/
 .heading-primary {

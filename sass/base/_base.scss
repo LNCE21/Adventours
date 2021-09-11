@@ -42,5 +42,11 @@ html {
 /*I am using this tag so i can inherit the following styling later*/
 body {
     box-sizing: border-box; /*Borders and paddings will not add to the total width and height that we specify*/
+    padding: 1.5rem; /*The whole page will have this white padding*/
+
+    //1rem = 8px (8px/16px= 50%) width < 900?
+    @include respond (tab-portrait) {
+        padding: 0;
+    }
 }
 
