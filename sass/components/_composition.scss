@@ -2,6 +2,10 @@
 .composition {
     position: relative;
 
+    @include respond(tab-portrait) {
+        margin-top: 15rem;
+    }
+
     &__photo {
         width: 50%; //This way the images will be responsive
         box-shadow: 0 .5rem rgba($color-black, .4);

@@ -153,7 +153,8 @@ body {
       font-size: 3rem; } }
   @media (max-width: 37.5em) {
     .heading-secondary {
-      font-size: 2.5rem; } }
+      font-size: 2.5rem;
+      letter-spacing: .1rem; } }
   .heading-secondary:hover {
     transform: skewx(-8deg) skewy(-0.9deg) scale(1.08);
     text-shadow: 0.5rem 0.1rem 0.2rem rgba(0, 0, 0, 0.09); }
@@ -318,6 +319,9 @@ body {
 
 .composition {
   position: relative; }
+  @media (max-width: 56.25em) {
+    .composition {
+      margin-top: 15rem; } }
   .composition__photo {
     width: 50%;
     box-shadow: 0 0.5rem rgba(0, 0, 0, 0.4);
@@ -703,7 +707,7 @@ body {
         margin-bottom: 8rem; } }
   @media (max-width: 56.25em) {
     .row {
-      max-width: 59rem;
+      max-width: 55rem;
       padding: 0 3rem; } }
   .row::after {
     content: "";
@@ -911,7 +915,9 @@ body {
   margin-bottom: 11vh; }
   @media (max-width: 56.25em) {
     .section-about {
-      padding: 20rem 0; } }
+      padding: 20rem 0;
+      margin-top: -17vh;
+      height: 105vh; } }
 
 .section-features {
   height: 60vh;
@@ -925,16 +931,23 @@ body {
     transform: skewY(7deg); }
   @media (max-width: 56.25em) {
     .section-features {
-      padding: 15rem 0; } }
+      padding: 15rem 0;
+      height: 100%; } }
 
 .section-tours {
   background-color: #f7f7f7;
   padding: 15rem 0 15rem 0; }
+  @media (max-width: 56.25em) {
+    .section-tours {
+      padding: 10rem 0; } }
 
 .section-stories {
   padding: 15rem 0;
   position: relative;
   z-index: 0; }
+  @media (max-width: 56.25em) {
+    .section-stories {
+      padding: 10rem 0; } }
 
 .section-book {
   padding: 15rem 0;

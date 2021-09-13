@@ -8,6 +8,8 @@
 
     @include respond(tab-portrait) {
         padding: 20rem 0;
+        margin-top: -17vh;
+        height: 105vh;
     }
 }
 
@@ -29,19 +31,26 @@
 
     @include respond(tab-portrait) {
         padding: 15rem 0;
+        height: 100%;
     }
 }
     
 .section-tours {
     background-color: $color-grey-light-1;
     padding: 15rem 0 15rem 0; //Top and bottom 25rem 
-    //margin-bottom: 15rem;  
+    //margin-bottom: 15rem; 
+    @include respond(tab-portrait) {
+        padding: 10rem 0;
+    } 
 }
 
 .section-stories {
     padding: 15rem 0;
     position: relative;
-    z-index: 0;  
+    z-index: 0;
+    @include respond(tab-portrait) {
+        padding: 10rem 0;
+    }   
 }
 
 .section-book {
@@ -62,6 +71,7 @@
         
     }
     */
+    
 }
 
 .book { 
