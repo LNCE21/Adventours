@@ -67,7 +67,7 @@ body {
     }
 
     @include respond(phone) {
-        font-size: 1.5rem;
+        font-size: 2rem;
         
     }
 
@@ -76,7 +76,6 @@ body {
         text-shadow: .5rem .1rem .2rem rgba($color-black, .09);
 
         @include respond(phone) {
-            font-size: 1.5rem;
             transform: skewx(-4deg) skewy(-0.45deg) scale(1.04);
         }
     }
