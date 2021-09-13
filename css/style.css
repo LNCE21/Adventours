@@ -69,7 +69,12 @@ html {
   /*If default is set to 16px, with this declaration, the html font-size will be 10px (10 / 16 = 0.625)*/
   /*If user set to 20px, our default font will be 12.5px (20*0.625=12.5)*/
   font-size: 62.5%;
-  /*Now: 1rem = 10px*/ }
+  /*Now: 1rem = 10px*/
+  /*1rem = 7px (7px/16px= 43.75%) width < 600?
+    @include respond (phone) {
+        font-size: 43.75%;
+    }
+    */ }
   @media (min-width: 112.5em) {
     html {
       font-size: 75%; } }
@@ -79,9 +84,6 @@ html {
   @media (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media (max-width: 37.5em) {
-    html {
-      font-size: 43.75%; } }
 
 /*I am using this tag so i can inherit the following styling later*/
 body {
@@ -122,6 +124,10 @@ body {
     /*Assigning keyframes rules*/
     animation-duration: 1.8s;
     animation-timing-function: ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: .5rem;
+        font-size: 5rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
