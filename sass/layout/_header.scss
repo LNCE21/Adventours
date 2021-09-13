@@ -16,6 +16,11 @@
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*It has 4 clockwise coordinates x y starting top left for the clips out effect*/
     position: relative; /*Header is the parent of logo-box, so i added relative*/
     
+    @include respond(phone) {
+        -webkit-clip-path:polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+
     /*Logo container nested in the header*/
     &__logo-box {
         position: absolute;

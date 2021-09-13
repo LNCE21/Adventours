@@ -150,7 +150,7 @@ body {
   transition: all .25s; }
   @media (max-width: 56.25em) {
     .heading-secondary {
-      font-size: 2.5rem; } }
+      font-size: 3rem; } }
   @media (max-width: 37.5em) {
     .heading-secondary {
       font-size: 2rem; } }
@@ -669,6 +669,10 @@ body {
   /*Logo container nested in the header*/
   /*text-box is to center both h1 and a -call to action- button nested in the header*/
   /*Logo image nested in the header*/ }
+  @media (max-width: 37.5em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 2rem;
@@ -694,6 +698,9 @@ body {
     @media (max-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 8rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem; } }
   .row::after {
     content: "";
     display: table;
