@@ -9,7 +9,7 @@
     @include respond(tab-portrait) {
         padding: 20rem 0;
         margin-top: -17vh;
-        height: 105vh;
+        height: 100vh;
     }
 }
 
@@ -40,10 +40,17 @@
     padding: 15rem 0 15rem 0; //Top and bottom 25rem 
     //margin-bottom: 15rem; 
     @include respond(tab-portrait) {
-        padding: 10rem 0;
-    } 
+        padding: 10rem 0;  
+    }
+   
 }
 
+#discover-tours {
+    margin-top: 52rem;
+    @include respond(tab-portrait) {
+        margin-top: 5rem !important;
+    }
+} 
 .section-stories {
     padding: 15rem 0;
     position: relative;

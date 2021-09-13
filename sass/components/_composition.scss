@@ -3,7 +3,7 @@
     position: relative;
 
     @include respond(tab-portrait) {
-        margin-top: 15rem;
+        margin-top: 1rem;
     }
 
     &__photo {

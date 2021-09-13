@@ -11,7 +11,7 @@
     }
 
     @include respond(tab-portrait) {
-        max-width: 55rem; 
+        max-width: 50rem; 
         padding: 0 3rem;
     }
     
@@ -31,7 +31,7 @@
         height: $gutter-vertical;
 
         @include respond(tab-portrait) {
-            height: $gutter-vertical-big !important;
+            height: 100% !important;
             width: 100% !important;
         }
     }
