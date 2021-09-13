@@ -32,11 +32,11 @@ html {
         font-size: 50%;
     }
   
-    //1rem = 7px (7px/16px= 43.75%) width < 600?
+    /*1rem = 7px (7px/16px= 43.75%) width < 600?
     @include respond (phone) {
         font-size: 43.75%;
     }
-    
+    */
 }
 
 /*I am using this tag so i can inherit the following styling later*/

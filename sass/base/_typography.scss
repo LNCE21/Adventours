@@ -15,7 +15,8 @@ body {
     text-transform: uppercase;
     backface-visibility: hidden; /*So set the entire back part of the heading invisible to the user. It fixes the shakingness*/
     margin-bottom: 6rem; /*With this we add spacing with the white button*/
-    
+  
+    }
     /*h1 first part "Outdoors nested inside heading-primary"*/
     &--main {
         display: block; /*Block-level elements occupy the entire width & create line breaks before and after (that's what i want)*/
@@ -25,7 +26,11 @@ body {
         animation-name: moveInLeft; /*Assigning keyframes rules*/
         animation-duration: 1.8s; 
         animation-timing-function: ease-out;
-    }
+            
+        @include respond(phone) {
+            letter-spacing: .5rem;
+            font-size: 5rem;
+        }
 
     /*h1 second part "is where life happens nested inside heading-primary"*/
     &--sub {
