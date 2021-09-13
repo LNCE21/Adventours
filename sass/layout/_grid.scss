@@ -3,7 +3,11 @@
     margin: 0 auto; //to center a block element inside a block element
     //Here we are selecting everything except the last child
     &:not(:last-child) { 
-        margin-bottom: $gutter-horizontal;
+        margin-bottom: $gutter-vertical-small;
+        
+        @include respond(tab-portrait) {
+            margin-bottom: $gutter-vertical;
+        }
     }
     
     @include clearfix;
@@ -13,8 +17,18 @@
         float: left;
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+
+            @include respond(tab-portrait) {
+                margin-right: 0 !important;
+                margin-bottom: $gutter-vertical-small; 
+            }
         }
         height: $gutter-vertical;
+
+        @include respond(tab-portrait) {
+            height: $gutter-vertical-big !important;
+            width: 100% !important;
+        }
     }
 
     //Here starts the styling of the 6 rows
