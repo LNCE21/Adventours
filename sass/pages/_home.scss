@@ -19,6 +19,13 @@
         height: 100%;
         margin-bottom: 11rem;
     }
+
+    @media (max-width: 1024px) {
+        padding: 20rem 0;
+        margin-top: -10vh;
+        height: 100%;
+        margin-bottom: 15rem;
+    }
 }
 
 .section-features {
@@ -26,9 +33,9 @@
     padding: 20rem 0rem;
     background-image: /*2 background images, a thin linear gradient and an image*/
     linear-gradient( /*A thin gradient to increase contrast*/
-    to right bottom, 
-    rgba($color-primary-light, 0.8), 
-    rgba($color-primary-dark, 0.76)) , 
+    to bottom, 
+    rgba($color-black, 0.1),
+    rgba($color-black, 0.02)) , 
     url(../img/nat-4.jpg); /*Link to the hero image*/
     background-size: cover; /*I want to cover all the box*/
     transform: skewY(-7deg);
@@ -36,11 +43,18 @@
     & > * {
         transform: skewY(7deg);
     }
+   
+    @media (max-width: 1024px) {
+        padding: 20rem 0;
+        height: 70rem;
+    }
 
     @include respond(tab-portrait) {
-        padding: 15rem 0;
+        padding: 8rem 0;
         height: 100%;
     }
+    
+    
 }
     
 .section-tours {
