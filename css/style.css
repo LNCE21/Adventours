@@ -126,7 +126,7 @@ body {
     animation-timing-function: ease-out; }
     @media (max-width: 37.5em) {
       .heading-primary--main {
-        letter-spacing: .5rem;
+        letter-spacing: .8rem;
         font-size: 5rem; } }
   .heading-primary--sub {
     display: block;
@@ -148,6 +148,12 @@ body {
   color: transparent;
   letter-spacing: .2rem;
   transition: all .25s; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2rem; } }
   .heading-secondary:hover {
     transform: skewx(-8deg) skewy(-0.9deg) scale(1.08);
     text-shadow: 0.5rem 0.1rem 0.2rem rgba(0, 0, 0, 0.09); }
