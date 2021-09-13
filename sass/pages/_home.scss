@@ -5,6 +5,10 @@
     padding: 25rem 0; //Top and bottom 25rem   
     margin-top: -20vh; //So the grey background touches the polygon
     margin-bottom: 11vh;
+
+    @include respond(tab-portrait) {
+        padding: 20rem 0;
+    }
 }
 
 .section-features {
@@ -21,6 +25,10 @@
     //Here we are going to select the direct children (row)
     & > * {
         transform: skewY(7deg);
+    }
+
+    @include respond(tab-portrait) {
+        padding: 15rem 0;
     }
 }
     

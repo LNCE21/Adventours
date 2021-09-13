@@ -6,15 +6,25 @@
     color: $color-grey-light-1;
     transition: all .2s;
 
+    @include respond(tab-portrait) {
+        padding: 2rem 0;
+        width: 100%;
+        font-size: 1.4rem;
+    }
+
     &__logo-box {
         text-align: center;
         margin-bottom: 8rem;
+        @include respond(tab-portrait) {
+            margin-bottom: 0rem;
+        }
     }
 
     &__navigation {
         border-top: 1px solid $color-grey-light-1;
         padding: 2rem;
         display: inline-block;
+       
     }
     
     &__logo {
@@ -31,6 +41,7 @@
 
         &:not(last-child) {
             margin-right: 1.5rem;
+            
         }
     }
 
@@ -57,10 +68,17 @@
     &__copyright {
         border-top: 1px solid $color-grey-light-1;
         padding: 2rem;
+
+        @include respond(tab-portrait) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     .col-1-of-2 {
-        display:inline-block;
+       display:inline-block;
     }
-}
 
+   
+
+}
