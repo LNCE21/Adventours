@@ -153,8 +153,10 @@ body {
       font-size: 3rem; } }
   @media (max-width: 37.5em) {
     .heading-secondary {
-      font-size: 2.5rem;
-      letter-spacing: .1rem; } }
+      font-size: 2rem;
+      letter-spacing: 0;
+      padding: 0;
+      margin-left: -2rem; } }
   .heading-secondary:hover {
     transform: skewx(-8deg) skewy(-0.9deg) scale(1.08);
     text-shadow: 0.5rem 0.1rem 0.2rem rgba(0, 0, 0, 0.09); }
@@ -166,6 +168,10 @@ body {
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase; }
+  @media (max-width: 37.5em) {
+    .heading-tertiary {
+      padding-top: 3rem;
+      padding-left: 1rem; } }
 
 .heading-quaternary {
   font-size: 3rem;
@@ -211,6 +217,9 @@ body {
 
 .u-margin-bottom-medium {
   margin-bottom: 4rem; }
+  @media (max-width: 37.5em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 1.5rem; } }
 
 .u-margin-bottom-small {
   margin-bottom: 2.5rem; }
@@ -754,8 +763,8 @@ body {
     /*top: 1.5rem;
             right: 4rem;*/
     float: right;
-    top: 8%;
-    right: 8%;
+    top: 2%;
+    right: 24%;
     font-size: 3rem;
     text-decoration: none;
     display: inline-block;
@@ -772,12 +781,29 @@ body {
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     overflow: hidden; }
+    @media (max-width: 56.25em) {
+      .popup__content {
+        width: 90%;
+        padding: 8rem 4rem; } }
+    @media (max-width: 37.5em) {
+      .popup__content {
+        height: 55rem;
+        width: 40rem;
+        padding: 0; } }
   .popup__img {
     display: block;
     width: 100%; }
+    @media (max-width: 37.5em) {
+      .popup__img {
+        display: none; } }
   .popup__left {
     width: 33.333333%;
     float: left; }
+    @media (max-width: 37.5em) {
+      .popup__left {
+        height: 0;
+        width: 0;
+        float: unset; } }
   .popup__right {
     vertical-align: center;
     width: 66.66666667%;
@@ -788,6 +814,14 @@ body {
     left: 70%;
     transform: translate(-50%, -50%);
     padding: 3rem 5rem; }
+    @media (max-width: 56.25em) {
+      .popup__right {
+        padding: 2rem 3.5rem;
+        width: 70%; } }
+    @media (max-width: 37.5em) {
+      .popup__right {
+        height: 100%;
+        width: 100%; } }
   .popup__text {
     width: 90%;
     font-size: 1.45rem;
@@ -802,6 +836,19 @@ body {
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; }
+    @media (max-width: 56.25em) {
+      .popup__text {
+        column-gap: 2rem;
+        margin-top: -3.9rem; } }
+    @media (max-width: 37.5em) {
+      .popup__text {
+        column-count: 1;
+        column-gap: 0rem;
+        column-rule: unset;
+        width: 100%;
+        margin-bottom: 5rem;
+        margin-left: -8rem;
+        margin-top: 2rem; } }
 
 /*Style of the header*/
 .header {

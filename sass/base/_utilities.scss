@@ -19,6 +19,10 @@
 //To add 4rem margin bottom
 .u-margin-bottom-medium {
     margin-bottom: 4rem;
+
+    @include respond(phone) {
+        margin-bottom: 1.5rem;
+    }
 }
 
 //To add 2.5rem margin bottom
