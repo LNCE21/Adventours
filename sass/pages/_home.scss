@@ -110,6 +110,11 @@
     */
     
 }
+.row {
+    @include respond(tab-portrait) {
+        width: 100%;
+    }
+}
 
 .book { 
     height: 55rem;
@@ -119,12 +124,23 @@
     linear-gradient(to right, 
     rgba($color-grey-light-2, .99), 
     rgba($color-grey-light-1, .80));
+    
+    @include respond(tab-portrait) {
+        width: 90rem;
+        margin-left: -22.9rem;
+    }
+   
 
     &__form {
         float: left;
         height: 100%;
         width: 40%;
         padding: 6rem;
+
+        @include respond(tab-portrait) {
+            width: 40%;
+            padding: 6rem 4rem 6rem 4rem;
+        }
     }
 
     &__picture{
@@ -137,6 +153,11 @@
         clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
         background-image: url(../img/nat-10.jpg);
         transition: all .5s;
+
+        @include respond(tab-portrait) {
+            width: 60%;
+            padding: 6rem 4rem 6rem 4rem;
+        }
     }
     
     &:hover &__picture {

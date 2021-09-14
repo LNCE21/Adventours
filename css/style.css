@@ -1129,16 +1129,28 @@ body {
     }
     */ }
 
+@media (max-width: 56.25em) {
+  .row {
+    width: 100%; } }
+
 .book {
   height: 55rem;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
   background-image: linear-gradient(to right, rgba(238, 238, 238, 0.99), rgba(247, 247, 247, 0.8)); }
+  @media (max-width: 56.25em) {
+    .book {
+      width: 90rem;
+      margin-left: -22.9rem; } }
   .book__form {
     float: left;
     height: 100%;
     width: 40%;
     padding: 6rem; }
+    @media (max-width: 56.25em) {
+      .book__form {
+        width: 40%;
+        padding: 6rem 4rem 6rem 4rem; } }
   .book__picture {
     float: right;
     height: 100%;
@@ -1149,5 +1161,9 @@ body {
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
     background-image: url(../img/nat-10.jpg);
     transition: all .5s; }
+    @media (max-width: 56.25em) {
+      .book__picture {
+        width: 60%;
+        padding: 6rem 4rem 6rem 4rem; } }
   .book:hover .book__picture {
     filter: blur(2px) brightness(80%); }
