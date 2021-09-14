@@ -106,6 +106,20 @@ body {
         transform: skewx(-8deg) skewy(-0.9deg) scale(1.08);
         text-shadow: .5rem .1rem .2rem rgba($color-black, .09);
     }
+
+    @include respond(tab-portrait) {
+        font-size: 2.5rem;
+        letter-spacing: .1rem; 
+    }
+
+    @include respond(phone) {
+        font-size: 2.2rem;
+        letter-spacing: .1rem; 
+        &:hover {
+            transform: skewx(-4deg) skewy(-0.45deg) scale(1.04);
+            text-shadow: .5rem .1rem .2rem rgba($color-black, .09);
+        }
+    }
 }
 
 .paragraph {

@@ -10,6 +10,21 @@
     font-size: $default-font-size;
     transform: skewX(-12deg);
 
+
+    @include respond(tab-portrait) {
+        margin-top: -1rem;
+        margin-bottom: -3rem;
+        width: 100%;
+        padding: 3rem 4rem 3rem 4rem;
+    }
+
+    @include respond(phone) {
+
+        transform: skewX(-5deg);
+        margin-top: -1rem;
+        margin-bottom: -4.5rem;
+    }
+
     //Circular Shape to hold the user's photo of the story section
     &__shape {
         width: 15rem;
@@ -20,9 +35,16 @@
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
         //Moving the image up and skewing back so the skew effect only applies to the box
-        transform: translateX(-0.9rem) skewX(12deg);
+        transform: translateY(-1.5rem) translateX(-3.5rem) skewX(12deg);
         position: relative;
         overflow:hidden;
+        
+        
+        @include respond(phone) {
+            width: 12rem;
+            height: 12rem;
+            transform: translateY(3.5rem) translateX(-3rem) skewX(5deg);
+        }
     }
 
     //Styling the image of the user that goes inside the shape
@@ -36,7 +58,18 @@
     //Skew back the text so it the "skew" effect only applies to the box
     &__text {
         transform: skewX(12deg);
-        margin-left: 5rem;
+        margin-left: 8rem;
+
+        @include respond(phone) {
+            width: 70%;
+            text-align: center;
+            margin-left: 10rem;
+            transform: skewX(5deg);
+            -moz-hyphens: auto;
+            -ms-hyphens: auto;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+        }
     }
 
     //The name of the user appears on top of the image when hover
