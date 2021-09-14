@@ -16,6 +16,10 @@
         display: block;
         transition: all .4s;
 
+        @include respond(tab-portrait) {
+            width: 100%;
+        }
+
         //Styling with focus pseudoelement to add some borders that indicates if you're adding a valid/invalid input
         &:focus {
 
@@ -59,6 +63,14 @@
     &__radio-group {
         width: 49%;
         display: inline-block;
+        @include respond(tab-portrait) {
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+        @include respond(phone) {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
     }
 
     //Hiding the default radio button so we only see the one we created
