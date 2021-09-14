@@ -450,11 +450,12 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
-    text-align: center; }
+    text-align: center;
+    padding: 4rem; }
   .card__price-box {
     text-align: center;
     color: #fff;
-    margin-bottom: 8rem; }
+    margin-bottom: 3rem; }
   .card__price-only {
     font-size: 1.9rem;
     text-transform: uppercase;
@@ -462,6 +463,82 @@ body {
   .card__price-value {
     font-size: 6rem;
     font-weight: 300; }
+  @media (max-width: 56.25em) {
+    .card {
+      height: auto; }
+      .card__side {
+        height: auto;
+        position: relative;
+        width: 100%;
+        border-radius: 3px;
+        box-shadow: 0.7rem 0.7rem 0.7rem 0.05rem rgba(0, 0, 0, 0.1); }
+        .card__side--back {
+          transform: rotateY(0); }
+          .card__side--back-1 {
+            background: #fff; }
+      .card:hover .card__side--front {
+        transform: rotateY(0); }
+      .card__picture {
+        background-size: cover;
+        height: 35rem;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+        .card__picture--1 {
+          background-image: url(../img/nat-5.jpg); }
+        .card__picture--2 {
+          background-image: url(../img/nat-6.jpg); }
+        .card__picture--3 {
+          background-image: url(../img/nat-7.jpg); }
+      .card__heading {
+        font-size: 2.25rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: right;
+        color: #fff;
+        position: absolute;
+        top: 25rem;
+        right: 1rem;
+        width: 70%; }
+      .card__heading-span {
+        border-radius: 2px;
+        padding: 0.45rem;
+        backface-visibility: hidden;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone; }
+        .card__heading-span--1 {
+          background-image: linear-gradient(to right bottom, rgba(40, 180, 133, 0.9), rgba(85, 197, 122, 0.45)); }
+      .card__details {
+        padding: 2rem; }
+        .card__details ul {
+          list-style: none;
+          width: 80%;
+          margin: 0 auto; }
+          .card__details ul li {
+            text-align: center;
+            font-size: 1.7rem;
+            padding: 1rem; }
+            .card__details ul li:not(:last-child) {
+              border-bottom: 1px solid #eee; }
+      .card__cta {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        text-align: center;
+        padding: 0 0 5rem 0; }
+      .card__price-box {
+        text-align: center;
+        color: #28b485;
+        margin-bottom: 3rem; }
+      .card__price-only {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-top: 0rem; }
+      .card__price-value {
+        font-size: 4.5rem;
+        font-weight: 600; } }
 
 .story {
   width: 75%;
