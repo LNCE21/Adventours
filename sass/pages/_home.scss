@@ -110,25 +110,17 @@
     */
     
 }
-.row {
-    @include respond(tab-portrait) {
-        width: 100%;
-    }
-}
+
 
 .book { 
     height: 55rem;
+    width: 100%;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
     background-image: 
     linear-gradient(to right, 
     rgba($color-grey-light-2, .99), 
     rgba($color-grey-light-1, .80));
-    
-    @include respond(tab-portrait) {
-        width: 90rem;
-        margin-left: -22.9rem;
-    }
    
 
     &__form {
@@ -138,8 +130,13 @@
         padding: 6rem;
 
         @include respond(tab-portrait) {
-            width: 40%;
-            padding: 6rem 4rem 6rem 4rem;
+            padding: 6rem 10rem;
+            width: 100%;
+        }
+
+        @include respond(phone) {
+            padding: 6rem 10rem;
+            width: 100%;
         }
     }
 
@@ -155,8 +152,7 @@
         transition: all .5s;
 
         @include respond(tab-portrait) {
-            width: 60%;
-            padding: 6rem 4rem 6rem 4rem;
+            display: none;
         }
     }
     
