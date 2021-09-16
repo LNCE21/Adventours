@@ -382,8 +382,13 @@
         <!--Footer Section Starts-->
         <footer class="footer">
             <!--Footer Logo-->
-            <div class="footer__logo-box">
-                <img src="img/logo-green-2x.png" alt="Adventours logo" class="footer__logo u-margin-bottom-medium">
+            <div class="footer__logo-box">  
+                <picture class="footer__logo">
+                    <source srcset="img/logo-green-small-1x 1x, img/logo-green-small-2x 2x" media="(max-width: 37.5em)">
+                    <img srcset="img/logo-green-1x.png 1x,  img/logo-green-2x.png 2x" alt="Adventours logo"  u-margin-bottom-medium">
+
+                </picture>
+                
                 <!--Footer Content-->
                 <div class="row">
                     <!--Footer Navigation-->
