@@ -9,6 +9,10 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
     transition: all .3s;
 
+    @include respond(tab-landscape) {
+        
+    }
+
     @include respond(tab-portrait) {
         padding: 1.6rem;
     }

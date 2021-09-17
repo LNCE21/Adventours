@@ -44,7 +44,7 @@
         transform: skewY(7deg);
     }
    
-    @media (max-width: 1024px) {
+    @include respond(tab-landscape){
         padding: 20rem 0;
         height: 70rem;
     }

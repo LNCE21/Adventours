@@ -1152,7 +1152,7 @@ body {
   transform: skewY(-7deg); }
   .section-features > * {
     transform: skewY(7deg); }
-  @media (max-width: 1024px) {
+  @media (max-width: 75em) {
     .section-features {
       padding: 20rem 0;
       height: 70rem; } }
