@@ -43,6 +43,11 @@ Order to write media queries: base + typography > general layout + grid > page l
         @media (max-width: 75em) { @content };
     }
 
+    //Media query from 1200px to 1300px
+    @if $breakpoint == laptop {
+        @media (max-width: 81.25em) { @content };
+    }
+
     //Media query from 1200 to 1800 is no needed (because we adopt the desktop-first approach
 
     //Media query from 1800px to bigger resolutions 
