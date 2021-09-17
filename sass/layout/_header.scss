@@ -12,8 +12,8 @@
         url(../img/hero.jpg); /*Link to the hero image*/
     background-size: cover; /*I want to cover all the box*/
     background-position: top; /*The top of the image will always stay as the main aspect, if it is need to cut the image, it will do so from elsewhere*/
-    -webkit-clip-path:polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*It has 4 clockwise coordinates x y starting top left for the clips out effect*/
+    -webkit-clip-path:polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); /*It has 4 clockwise coordinates x y starting top left for the clips out effect*/
     position: relative; /*Header is the parent of logo-box, so i added relative*/
     
     @include respond(phone) {
