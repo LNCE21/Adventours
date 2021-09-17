@@ -3,14 +3,31 @@
 
 /*Style of the header*/
 .header {
-    height: 95vh; /*95 View Height unit is equivalent to 95% of the viewport height
+    height: 95vh; /*95 View Height unit is equivalent to 95% of the viewport height*/
+    .bg-video-hero {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 1;
+        overflow: hidden;
+        background-size: cover;
+        &__content {
+            height: 100%;
+            width: 100%;
+            object-fit: cover; //Manteins its aspect ratio
+        }
+    }
+    /*
     background-image: /*2 background images, a thin linear gradient and an image
         linear-gradient( /*A thin gradient to increase contrast
         to right bottom, 
         rgba($color-primary-light, 0.8), 
         rgba($color-primary-dark, 0.76)) , 
-        url(../img/hero.jpg); /*Link to the hero image*/
-    background-size: cover; /*I want to cover all the box*/
+        url(../img/hero.jpg); /*Link to the hero image
+    background-size: cover; /*I want to cover all the box
     background-position: top; /*The top of the image will always stay as the main aspect, if it is need to cut the image, it will do so from elsewhere*/
     -webkit-clip-path:polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); /*It has 4 clockwise coordinates x y starting top left for the clips out effect*/
