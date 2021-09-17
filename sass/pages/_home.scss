@@ -45,11 +45,11 @@
     }
    
     @include respond(big-desktop) {
-        height: 90vh;
+        height: 100vh;
     }
 
     @include respond(laptop){
-        height: 120vh;
+        height: 100vh;
     }
 
     @include respond(tab-landscape){

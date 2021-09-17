@@ -1154,10 +1154,10 @@ body {
     transform: skewY(7deg); }
   @media (min-width: 112.5em) {
     .section-features {
-      height: 90vh; } }
-  @media (max-width: 81.25em) {
+      height: 100vh; } }
+  @media (max-width: 112.5em) {
     .section-features {
-      height: 120vh; } }
+      height: 100vh; } }
   @media (max-width: 75em) {
     .section-features {
       padding: 20rem 0;
