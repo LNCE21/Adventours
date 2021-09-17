@@ -3,9 +3,9 @@
 
 /*Style of the header*/
 .header {
-    height: 95vh; /*95 View Height unit is equivalent to 95% of the viewport height*/
-    background-image: /*2 background images, a thin linear gradient and an image*/
-        linear-gradient( /*A thin gradient to increase contrast*/
+    height: 95vh; /*95 View Height unit is equivalent to 95% of the viewport height
+    background-image: /*2 background images, a thin linear gradient and an image
+        linear-gradient( /*A thin gradient to increase contrast
         to right bottom, 
         rgba($color-primary-light, 0.8), 
         rgba($color-primary-dark, 0.76)) , 
