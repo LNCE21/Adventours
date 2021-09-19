@@ -6,15 +6,15 @@
     height: 100%;
     width: 100%;
     z-index: -1;
-    opacity: .30;
     overflow: hidden;
     transform: skewY(-6deg); 
-
+    
     //Setting height and width to the video, and to cover not only the container but the entire parent
     &__content {
         height: 100%;
         width: 100%;
         object-fit: cover; //Manteins its aspect ratio
+        
     }
 }
 

@@ -854,8 +854,6 @@ body {
 .header {
   height: 95vh;
   /*95 View Height unit is equivalent to 95% of the viewport height*/
-  animation: fade 1s ease-in-out forwards;
-  opacity: 0;
   /*
     background-image: /*2 background images, a thin linear gradient and an image
         linear-gradient( /*A thin gradient to increase contrast
@@ -882,6 +880,8 @@ body {
     display: block;
     overflow: hidden;
     background-size: cover;
+    animation: fade 1s ease-in-out forwards;
+    opacity: 0;
     /*
         @media (max-width:48.75em) {
             background-image: url(../img/forest-hero-2.jpg); /*Link to the hero image
@@ -892,7 +892,8 @@ body {
 
 @keyframes fade {
   to {
-    opacity: 1; } }
+    opacity: 1;
+    filter: blur(1px) brightness(90%); } }
     .header .bg-video-hero__content {
       height: 100%;
       width: 100%;

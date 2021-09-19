@@ -89,6 +89,7 @@
     padding: 15rem 0;
     position: relative;
     z-index: 0;
+    filter: blur(2px) brightness(80%);
     @include respond(tab-portrait) {
         padding: 8rem 0;
     } 
