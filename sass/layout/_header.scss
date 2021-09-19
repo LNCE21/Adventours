@@ -3,16 +3,21 @@
 /*Style of the header*/
 .header {
     height: 95vh; /*95 View Height unit is equivalent to 95% of the viewport height*/
-    
+    animation: fade 1s ease-in-out forwards;
+    opacity: 0;
     .bg-video-hero {
         position: absolute;
         top: 0;
         left: 0;
         height: 100%;
         width: 100%;
-        opacity: 1;
+        display: block;
         overflow: hidden;
         background-size: cover;
+        
+        @keyframes fade {
+            to{opacity: 1;}
+        }
         
         &__content {
             height: 100%;
