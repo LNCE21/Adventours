@@ -90,8 +90,12 @@
     padding: 15rem 0;
     position: relative;
     z-index: 0;
+    
     @include respond(tab-portrait) {
         padding: 8rem 0;
+        background-image: url(../img/forest-phone-story.jpg); /*Link to the hero image*/
+        background-size: cover; /*I want to cover all the box*/
+        background-position: center;
     } 
     
     @include respond(phone) {

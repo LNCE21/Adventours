@@ -39,6 +39,10 @@
         position: relative;
         overflow:hidden;
         
+        @include respond(tab-portrait) {
+            transform: translateY(1.2rem) translateX(-2.5rem) skewX(12deg);
+        }
+        
         
         @include respond(phone) {
             width: 12rem;

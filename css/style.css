@@ -597,6 +597,9 @@ body {
     transform: translateY(-1.5rem) translateX(-3.5rem) skewX(12deg);
     position: relative;
     overflow: hidden; }
+    @media (max-width: 56.25em) {
+      .story__shape {
+        transform: translateY(1.2rem) translateX(-2.5rem) skewX(12deg); } }
     @media (max-width: 37.5em) {
       .story__shape {
         width: 12rem;
@@ -651,6 +654,9 @@ body {
     width: 100%;
     object-fit: cover;
     filter: blur(1px) brightness(80%); }
+  @media (max-width: 56.25em) {
+    .bg-video {
+      display: none; } }
 
 .form__group:not(:last-child) {
   margin-bottom: 2rem; }
@@ -1172,7 +1178,12 @@ body {
   z-index: 0; }
   @media (max-width: 56.25em) {
     .section-stories {
-      padding: 8rem 0; } }
+      padding: 8rem 0;
+      background-image: url(../img/forest-phone-story.jpg);
+      /*Link to the hero image*/
+      background-size: cover;
+      /*I want to cover all the box*/
+      background-position: center; } }
   @media (max-width: 37.5em) {
     .section-stories {
       padding: 4.5rem 0; } }

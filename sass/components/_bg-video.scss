@@ -16,8 +16,9 @@
         object-fit: cover; //Manteins its aspect ratio
         filter: blur(1px) brightness(80%);
     }
-
-    
+    @include respond(tab-portrait) {
+        display: none;
+    }
 }
 
 
