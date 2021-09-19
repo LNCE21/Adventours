@@ -30,11 +30,13 @@
             z-index: -1;
         }
 
+        /*
         @media (max-width:48.75em) {
-            background-image: url(../img/forest-hero-2.jpg); /*Link to the hero image*/
-            background-size: cover; /*I want to cover all the box*/
-            background-position: top; /*The top of the image will always stay as the main aspect, if it is need to cut the image, it will do so from elsewhere*/
+            background-image: url(../img/forest-hero-2.jpg); /*Link to the hero image
+            background-size: cover; /*I want to cover all the box
+            background-position: top; /*The top of the image will always stay as the main aspect, if it is need to cut the image, it will do so from elsewhere
         }
+        */
     }
     /*
     background-image: /*2 background images, a thin linear gradient and an image

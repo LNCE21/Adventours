@@ -881,7 +881,14 @@ body {
     width: 100%;
     display: block;
     overflow: hidden;
-    background-size: cover; }
+    background-size: cover;
+    /*
+        @media (max-width:48.75em) {
+            background-image: url(../img/forest-hero-2.jpg); /*Link to the hero image
+            background-size: cover; /*I want to cover all the box
+            background-position: top; /*The top of the image will always stay as the main aspect, if it is need to cut the image, it will do so from elsewhere
+        }
+        */ }
 
 @keyframes fade {
   to {
@@ -893,14 +900,6 @@ body {
     .header .bg-video-hero #videobg {
       position: fixed;
       z-index: -1; }
-    @media (max-width: 48.75em) {
-      .header .bg-video-hero {
-        background-image: url(../img/forest-hero-2.jpg);
-        /*Link to the hero image*/
-        background-size: cover;
-        /*I want to cover all the box*/
-        background-position: top;
-        /*The top of the image will always stay as the main aspect, if it is need to cut the image, it will do so from elsewhere*/ } }
   @media (max-width: 37.5em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
