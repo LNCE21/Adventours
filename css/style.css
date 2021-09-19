@@ -177,7 +177,7 @@ body {
   font-size: 3rem;
   text-transform: uppercase;
   font-weight: 700;
-  background-image: linear-gradient(to right bottom, #4b4b4b, #4e4e4e);
+  background-image: linear-gradient(to right bottom, #e2e2e2, #e6e6e6);
   display: inline-block;
   -webkit-background-clip: text;
   color: transparent;
@@ -644,13 +644,13 @@ body {
   height: 100%;
   width: 100%;
   z-index: -1;
-  opacity: .30;
   overflow: hidden;
   transform: skewY(-6deg); }
   .bg-video__content {
     height: 100%;
     width: 100%;
-    object-fit: cover; }
+    object-fit: cover;
+    filter: blur(1px) brightness(80%); }
 
 .form__group:not(:last-child) {
   margin-bottom: 2rem; }
@@ -854,15 +854,12 @@ body {
 .header {
   height: 95vh;
   /*95 View Height unit is equivalent to 95% of the viewport height*/
-  /*
-    background-image: /*2 background images, a thin linear gradient and an image
-        linear-gradient( /*A thin gradient to increase contrast
-        to right bottom, 
-        rgba($color-primary-light, 0.8), 
-        rgba($color-primary-dark, 0.76)) , 
-        url(../img/hero.jpg); /*Link to the hero image
-    background-size: cover; /*I want to cover all the box
-    background-position: top; /*The top of the image will always stay as the main aspect, if it is need to cut the image, it will do so from elsewhere*/
+  background-image: url(../img/nat-4.jpg);
+  /*Link to the hero image*/
+  background-size: cover;
+  /*I want to cover all the box*/
+  background-position: center;
+  /*The top of the image will always stay as the main aspect, if it is need to cut the image, it will do so from elsewhere*/
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
   /*It has 4 clockwise coordinates x y starting top left for the clips out effect*/
@@ -871,36 +868,6 @@ body {
   /*Logo container nested in the header*/
   /*text-box is to center both h1 and a -call to action- button nested in the header*/
   /*Logo image nested in the header*/ }
-  .header .bg-video-hero {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: block;
-    overflow: hidden;
-    background-size: cover;
-    animation: fade 1s ease-in-out forwards;
-    opacity: 0;
-    /*
-        @media (max-width:48.75em) {
-            background-image: url(../img/forest-hero-2.jpg); /*Link to the hero image
-            background-size: cover; /*I want to cover all the box
-            background-position: top; /*The top of the image will always stay as the main aspect, if it is need to cut the image, it will do so from elsewhere
-        }
-        */ }
-
-@keyframes fade {
-  to {
-    opacity: 1;
-    filter: blur(1px) brightness(90%); } }
-    .header .bg-video-hero__content {
-      height: 100%;
-      width: 100%;
-      object-fit: cover; }
-    .header .bg-video-hero #videobg {
-      position: fixed;
-      z-index: -1; }
   @media (max-width: 37.5em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
@@ -912,7 +879,7 @@ body {
     left: 2rem; }
   .header__text-box {
     position: absolute;
-    top: 40%;
+    top: 47%;
     /*From the parent element (header)*/
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1160,7 +1127,7 @@ body {
 .section-features {
   height: 60vh;
   padding: 20rem 0rem;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.02)), url(../img/nat-4.jpg);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.02)), url(../img/forest-hero.jpg);
   /*Link to the hero image*/
   background-size: cover;
   /*I want to cover all the box*/

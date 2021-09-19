@@ -99,7 +99,7 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     //Setting a background gradient on the heading
-    background-image: linear-gradient(to right bottom, rgb(75, 75, 75), rgb(78, 78, 78));
+    background-image: linear-gradient(to right bottom, rgb(226, 226, 226), rgb(230, 230, 230));
     //The background only have to occupy the width of the h2, that's why i took off "block"
     display: inline-block; 
     //To get clipped that gradient background behind the text. So it will only be visible where the text is

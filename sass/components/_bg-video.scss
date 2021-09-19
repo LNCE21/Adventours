@@ -14,8 +14,10 @@
         height: 100%;
         width: 100%;
         object-fit: cover; //Manteins its aspect ratio
-        
+        filter: blur(1px) brightness(80%);
     }
+
+    
 }
 
 
