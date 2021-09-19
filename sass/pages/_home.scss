@@ -38,6 +38,7 @@
     rgba($color-black, 0.02)) , 
     url(../img/forest-hero.jpg); /*Link to the hero image*/
     background-size: cover; /*I want to cover all the box*/
+    background-position: center;
     transform: skewY(-7deg);
     //Here we are going to select the direct children (row)
     & > * {
