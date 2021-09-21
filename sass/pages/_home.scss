@@ -46,7 +46,7 @@
     }
    
     @include respond(big-desktop) {
-        height: 100vh;
+        height: 70vh;
     }
 
     @include respond(laptop){
