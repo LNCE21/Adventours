@@ -75,13 +75,13 @@ html {
         font-size: 43.75%;
     }
     */ }
-  @media (min-width: 112.5em) {
+  @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
 
@@ -91,9 +91,13 @@ body {
   /*Borders and paddings will not add to the total width and height that we specify*/
   padding: 1.5rem;
   /*The whole page will have this white padding*/ }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     body {
       padding: 0; } }
+
+::selection {
+  background-color: #55c57a;
+  color: #fff; }
 
 /*I am using this tag so i can inherit the following styling later*/
 body {
@@ -124,7 +128,7 @@ body {
     /*Assigning keyframes rules*/
     animation-duration: 1.8s;
     animation-timing-function: ease-out; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .heading-primary--main {
         letter-spacing: .8rem;
         font-size: 5rem; } }
@@ -148,10 +152,10 @@ body {
   color: transparent;
   letter-spacing: .2rem;
   transition: all .25s; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .heading-secondary {
       font-size: 3rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .heading-secondary {
       font-size: 2rem;
       letter-spacing: 0;
@@ -160,7 +164,7 @@ body {
   .heading-secondary:hover {
     transform: skewx(-8deg) skewy(-0.9deg) scale(1.08);
     text-shadow: 0.5rem 0.1rem 0.2rem rgba(0, 0, 0, 0.09); }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .heading-secondary:hover {
         transform: skewx(-4deg) skewy(-0.45deg) scale(1.04); } }
 
@@ -168,7 +172,7 @@ body {
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .heading-tertiary {
       padding-top: 3rem;
       padding-left: 1rem; } }
@@ -186,11 +190,11 @@ body {
   .heading-quaternary:hover {
     transform: skewx(-8deg) skewy(-0.9deg) scale(1.08);
     text-shadow: 0.5rem 0.1rem 0.2rem rgba(0, 0, 0, 0.09); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .heading-quaternary {
       font-size: 2.5rem;
       letter-spacing: .1rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .heading-quaternary {
       font-size: 2.2rem;
       letter-spacing: .1rem; }
@@ -208,16 +212,16 @@ body {
 
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .u-margin-bottom-big {
       margin-bottom: 5rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .u-margin-bottom-big {
       margin-bottom: 3rem; } }
 
 .u-margin-bottom-medium {
   margin-bottom: 4rem; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .u-margin-bottom-medium {
       margin-bottom: 1.5rem; } }
 
@@ -345,7 +349,7 @@ body {
 
 .composition {
   position: relative; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .composition {
       margin-top: 1rem; } }
   .composition__photo {
@@ -379,10 +383,10 @@ body {
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: all .3s; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .feature-box {
       padding: 1.6rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .feature-box {
       padding: 1.4rem; } }
   .feature-box__icon {
@@ -392,11 +396,11 @@ body {
     display: inline-block;
     -webkit-background-clip: text;
     color: transparent; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .feature-box__icon {
         margin-bottom: .15rem;
         font-size: 4.5rem; } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .feature-box__icon {
         margin-bottom: 0;
         font-size: 4rem; } }
@@ -489,7 +493,7 @@ body {
   .card__price-value {
     font-size: 6rem;
     font-weight: 300; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .card {
       height: auto; }
       .card__side {
@@ -575,13 +579,13 @@ body {
   padding: 6rem 6rem 8rem 9rem;
   font-size: 1.6rem;
   transform: skewX(-12deg); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .story {
       margin-top: -1rem;
       margin-bottom: -3rem;
       width: 100%;
       padding: 3rem 4rem 3rem 4rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .story {
       transform: skewX(-5deg);
       margin-top: -1rem;
@@ -597,10 +601,10 @@ body {
     transform: translateY(-1.5rem) translateX(-3.5rem) skewX(12deg);
     position: relative;
     overflow: hidden; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .story__shape {
         transform: translateY(1.2rem) translateX(-2.5rem) skewX(12deg); } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .story__shape {
         width: 12rem;
         height: 12rem;
@@ -613,7 +617,7 @@ body {
   .story__text {
     transform: skewX(12deg);
     margin-left: 8rem; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .story__text {
         width: 70%;
         text-align: center;
@@ -654,7 +658,7 @@ body {
     width: 100%;
     object-fit: cover;
     filter: blur(1px) brightness(80%); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .bg-video {
       display: none; } }
 
@@ -672,7 +676,7 @@ body {
   width: 100%;
   display: block;
   transition: all .4s; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .form__input {
       width: 100%; } }
   .form__input:focus {
@@ -703,11 +707,11 @@ body {
 .form__radio-group {
   width: 49%;
   display: inline-block; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .form__radio-group {
       width: 100%;
       margin-bottom: 1.5rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .form__radio-group {
       width: 100%;
       margin-bottom: 1rem; } }
@@ -787,11 +791,11 @@ body {
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     overflow: hidden; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .popup__content {
         width: 90%;
         padding: 8rem 4rem; } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .popup__content {
         height: 55rem;
         width: 40rem;
@@ -799,13 +803,13 @@ body {
   .popup__img {
     display: block;
     width: 100%; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .popup__img {
         display: none; } }
   .popup__left {
     width: 33.333333%;
     float: left; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .popup__left {
         height: 0;
         width: 0;
@@ -820,11 +824,11 @@ body {
     left: 70%;
     transform: translate(-50%, -50%);
     padding: 3rem 5rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .popup__right {
         padding: 2rem 3.5rem;
         width: 70%; } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .popup__right {
         height: 100%;
         width: 100%; } }
@@ -842,11 +846,11 @@ body {
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .popup__text {
         column-gap: 2rem;
         margin-top: -3.9rem; } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .popup__text {
         column-count: 1;
         column-gap: 0rem;
@@ -874,7 +878,7 @@ body {
   /*Logo container nested in the header*/
   /*text-box is to center both h1 and a -call to action- button nested in the header*/
   /*Logo image nested in the header*/ }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
       clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
@@ -900,10 +904,10 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 6rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 8rem; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .row {
       max-width: 50rem;
       padding: 0 3rem; } }
@@ -916,11 +920,11 @@ body {
     height: 8rem; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .row [class^="col-"]:not(:last-child) {
           margin-right: 0 !important;
           margin-bottom: 6rem; } }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row [class^="col-"] {
         height: 100% !important;
         width: 100% !important; } }
@@ -943,7 +947,7 @@ body {
   font-size: 1.4rem;
   color: #f7f7f7;
   transition: all .2s; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .footer {
       padding: 2rem 0;
       width: 100%;
@@ -951,7 +955,7 @@ body {
   .footer__logo-box {
     text-align: center;
     margin-bottom: 8rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__logo-box {
         margin-bottom: 0rem; } }
   .footer__navigation {
@@ -981,7 +985,7 @@ body {
   .footer__copyright {
     border-top: 1px solid #f7f7f7;
     padding: 2rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__copyright {
         width: 100%;
         text-align: center; } }
@@ -1111,19 +1115,19 @@ body {
   padding: 25rem 0;
   margin-top: -20vh;
   margin-bottom: 11vh; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-about {
       padding: 20rem 0;
       margin-top: -12vh;
       height: 100vh;
       margin-bottom: -6rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .section-about {
       padding: 20rem 0;
       margin-top: -15vh;
       height: 100%;
       margin-bottom: 11rem; } }
-  @media (max-width: 1024px) {
+  @media only screen and (max-width: 1024px) {
     .section-about {
       padding: 20rem 0;
       margin-top: -10vh;
@@ -1141,17 +1145,17 @@ body {
   transform: skewY(-7deg); }
   .section-features > * {
     transform: skewY(7deg); }
-  @media (min-width: 112.5em) {
+  @media only screen and (min-width: 112.5em) {
     .section-features {
       height: 70vh; } }
-  @media (max-width: 112.5em) {
+  @media only screen and (max-width: 112.5em) {
     .section-features {
       height: 100vh; } }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .section-features {
       padding: 20rem 0;
       height: 70rem; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-features {
       padding: 8rem 0;
       height: 100%; } }
@@ -1159,16 +1163,16 @@ body {
 .section-tours {
   background-color: #f7f7f7;
   padding: 15rem 0 15rem 0; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-tours {
       padding: 10rem 0; } }
 
 #discover-tours {
   margin-top: 52rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     #discover-tours {
       margin-top: 5rem !important; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     #discover-tours {
       margin-top: 2.5rem !important; } }
 
@@ -1176,7 +1180,7 @@ body {
   padding: 15rem 0;
   position: relative;
   z-index: 0; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-stories {
       padding: 8rem 0;
       background-image: url(../img/forest-phone-story.jpg);
@@ -1184,7 +1188,7 @@ body {
       background-size: cover;
       /*I want to cover all the box*/
       background-position: center; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .section-stories {
       padding: 4.5rem 0; } }
 
@@ -1216,11 +1220,11 @@ body {
     height: 100%;
     width: 40%;
     padding: 6rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .book__form {
         padding: 6rem 10rem;
         width: 100%; } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .book__form {
         padding: 6rem 10rem;
         width: 100%; } }
@@ -1234,7 +1238,7 @@ body {
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
     background-image: url(../img/nat-10.jpg);
     transition: all .5s; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .book__picture {
         display: none; } }
   .book:hover .book__picture {

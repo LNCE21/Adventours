@@ -51,3 +51,8 @@ body {
     }
 }
 
+//Changing styling of selection
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
