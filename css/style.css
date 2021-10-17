@@ -1242,4 +1242,4 @@ body {
       .book__picture {
         display: none; } }
   .book:hover .book__picture {
-    filter: blur(2px) brightness(80%); }
+    filter: brightness(70%); }

@@ -171,6 +171,6 @@
     }
     
     &:hover &__picture {
-       filter: blur(2px) brightness(80%);
+       filter: /*blur(2px)*/ brightness(70%);
     }
 }
