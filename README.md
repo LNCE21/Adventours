@@ -4,6 +4,8 @@
 
 
 <h3 align="center"></h3>Install NPM Node SASS to compile the scss file into css
+<br>
+<br>
 
 ```bash
 # Clone this repository
