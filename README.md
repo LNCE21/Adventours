@@ -28,8 +28,6 @@ Ritwick Dey -Live Server-
 <h3 align="center"> Demo of how to run it<h3>
 <p align="center">
 <br>
-<br>
-<br>
-<img src="img/adventoursGif.gif" alt="Run Demo"/>
+<img src="img/adventoursGif.gif" height="545" alt="Run Demo"/>
 </>
 
