@@ -30,6 +30,6 @@ Ritwick Dey -Live Server-
 <br>
 <br>
 <br>
-<img src="#" alt="Run Demo"/>
+<img src="img/adventoursGif.gif" alt="Run Demo"/>
 </>
 
