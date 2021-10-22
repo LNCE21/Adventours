@@ -2,7 +2,15 @@
 
 <p align= "center">This readme is on working progress, if you have any doubts or suggestions, reach me on my socials.</p>
 
-
+<h3 align="center"> Demo of how it works<h3>
+<p align="center">
+Click the demo preview and it will take you to the game!
+<br>
+<br>
+<br>
+<a href="https://lnce21.github.io/Adventours/" target="_blank"> <img src="img/" alt="Adventours Page Demo"/></a>
+</>
+<br>
 <h3 align="center"></h3>Install NPM Node SASS to compile the scss file into css
 <br>
 <br>
