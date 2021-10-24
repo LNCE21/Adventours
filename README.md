@@ -2,9 +2,8 @@
 
 <p align= "center">This readme is on working progress, if you have any doubts or suggestions, reach me on my socials.</p>
 
-<h3 align="center"> Demo of how it works<h3>
 <p align="center">
-Click the demo preview and it will take you to the game!
+Click the demo preview and it will take you to the site!
 <br>
 <br>
 <br>
