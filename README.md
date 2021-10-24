@@ -8,7 +8,7 @@ Click the demo preview and it will take you to the game!
 <br>
 <br>
 <br>
-<a href="https://lnce21.github.io/Adventours/" target="_blank"> <img src="img/adventoursGifDemo.gif" alt="Adventours Page Demo"/></a>
+<a href="https://lnce21.github.io/Adventours/" target="_blank"> <img src="img/adventoursGifDemo.gif" alt="Adventours Site Demo"/></a>
 </>
 <br>
 <h3 align="center"></h3>Install NPM Node SASS to compile the scss file into css
